@@ -1,0 +1,64 @@
+<resources>
+    <string name="app_name">SWYHealthMonitoring</string>
+    <string name="MainPatientButton">Patient Login</string>
+    <string name="MainDoctorButton">Doctor Login</string>
+    <string name="PatientLoginUserName">User Name</string>
+    <string name="PatientLoginPassword">Password</string>
+    <string name="PatientLoginButtonLogin">Login</string>
+    <string name="PatientLoginForgetPassword">I Forget My Password</string>
+
+    <string name="PatientLoginText1">Don\'t have an account?</string>
+    <string name="PatientLogincreataccount">create account</string>
+    <string name="DoctorLoginUserName">User Name</string>
+    <string name="DoctorLoginPassword">Password</string>
+    <string name="DoctorLoginButtonLogin">Login</string>
+    <string name="DoctorLoginForgetPassword">I Forget My Password</string>
+    <string name="DoctorLoginText1">Don\'t have an account?</string>
+    <string name="DoctorLogincreataccount">Create account</string>
+    <string name="PatientForgetPassword">User Name</string>
+    <string name="PatientForgetPasswordHint">we will Send a masseg with your forgetten password to your Email</string>
+    <string name="PatientForgetPasswordSubmit">Submit</string>
+    <string name="PatientForgetPasswordHint1">Your Password Has been Sent </string>
+    <string name="DoctorForgetPassword">User Name</string>
+    <string name="DoctorForgetPasswordHint">we will Send a masseg with your forgetten password to your Email</string>
+    <string name="DoctorForgetPasswordSubmit">Submit</string>
+    <string name="DoctorForgetPasswordHint1">Your Password Has been Sent </string>
+    <string name="PatientCreateAccountEmail">Email</string>
+    <string name="PatientCreateAccountDate">Date</string>
+    <string name="PatientCreateAccountPassword">Password</string>
+    <string name="PatientCreateAccountConfirmPassword">Confirm Password</string>
+    <string name="PatientCreateAccountNext">Next</string>
+    <string name="PatientCreateAccountText">Have an account already?</string>
+    <string name="PatientCreateAccountLogin">Login</string>
+    <string name="PatientCreateAccount2UserName">User Name</string>
+    <string name="PatientCreateAccount2Name">Name</string>
+    <string name="PatientCreateAccount2Gender">Gender</string>
+    <string name="PatientCreateAccount2Iagree">I agree</string>
+    <string name="PatientCreateAccount2CreateAccount">Create Account</string>
+    <string name="DoctorCreateAccountEmail">Email</string>
+    <string name="DoctorCreateAccountDate">Date</string>
+    <string name="DoctorCreateAccountPassword">Password</string>
+    <string name="DoctorCreateAccountConfirmPassword">Confirm Password</string>
+    <string name="DoctorCreateAccountNext">Next</string>
+    <string name="DoctorCreateAccountText">Have an account already?</string>
+    <string name="DoctorCreateAccountLogin">Login</string>
+    <string name="DoctorCreateAccount2UserName">User Name</string>
+    <string name="DoctorCreateAccount2Name">Name</string>
+    <string name="DoctorCreateAccount2Gender">Gender</string>
+    <string name="DoctorCreateAccount2Iagree">I agree</string>
+    <string name="DoctorCreateAccount2CreateAccount">Create Account</string>
+    <string name="PatientHomeVideoCall"><![CDATA[Start video call with your doctor now >]]></string>
+    <string name="PatientHomeTempText">Check your temperature</string>
+    <string name="PatientHomeglocText">Check your Diabetes</string>
+    <string name="PatientHomeHeartText">Check your Heart_Rate</string>
+    <string name="PatientHomePreText">Check your Blood Pressure</string>
+
+
+    <string name="PatientHomeHomeIconText">Home</string>
+    <string name="PatientHomeHeartIconText"> My Health</string>
+    <string name="PatientHomeIconLocationText">Hospital</string>
+    <string name="PatientHomeIconFamilyText">Family</string>
+    <string name="PatientHomeAccountIconText">Account</string>
+
+
+</resources>
