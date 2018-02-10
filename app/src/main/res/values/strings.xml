@@ -60,5 +60,24 @@
     <string name="PatientHomeIconFamilyText">Family</string>
     <string name="PatientHomeAccountIconText">Account</string>
 
+    <string name="PatientAccountLogout">Logout</string>
+    <string name="PatientAccountUserName">User Name</string>
+    <string name="PatientAccountName">Name</string>
+    <string name="PatientAccountHomeIconText">Home</string>
+    <string name="PatientAccountHeartIconText">My Health</string>
+    <string name="PatientAccountIconLocationText">Hospital</string>
+    <string name="PatientAccountIconFamilyText">Family</string>
+    <string name="PatientAccountAccountIconText">Account</string>
+    <string name="PatientAccountPAtientInfoText">Patient Info</string>
+    <string name="PatientAccountPAtientEmailAndpassText"><![CDATA[Email & Password]]></string>
+    <string name="PatientAccountCustomerSupportText">Customer Support</string>
+    <string name="PatientAccountAboutUsText">About Us</string>
+
+
+    <string name="PatientAccountInformationDateOfBirth">Date of birth</string>
+    <string name="PatientAccountInformationName">Name</string>
+    <string name="PatientAccountInformationPhone">phone</string>
+    <string name="PatientAccountInformationconfirm">Confirm</string>
+
 
 </resources>
