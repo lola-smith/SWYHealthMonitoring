@@ -42,23 +42,19 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/SWYImageView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.012" />
 
     <ImageButton
         android:id="@+id/PatientHomeTempImage"
-        android:layout_width="190dp"
-        android:layout_height="155dp"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="5dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginStart="32dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/PatientHomeglocImage"
-        app:layout_constraintHorizontal_bias="0.057"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PatientHomeVideoCall"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.035"
         app:srcCompat="@drawable/tempsensor" />
 
     <TextView
@@ -67,31 +63,30 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/PatientHomeTempText"
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/PatientHomeTempImage"
-        app:layout_constraintEnd_toEndOf="@+id/PatientHomeTempImage"
-        app:layout_constraintHorizontal_bias="0.357"
+        app:layout_constraintBottom_toTopOf="@+id/PatientHomeHeartImage"
+        app:layout_constraintEnd_toStartOf="@+id/PatientHomeglocText"
+        app:layout_constraintHorizontal_bias="0.315"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/PatientHomeTempImage"
-        app:layout_constraintVertical_bias="0.98" />
+        app:layout_constraintTop_toBottomOf="@+id/PatientHomeTempImage" />
 
     <ImageButton
         android:id="@+id/PatientHomeglocImage"
-        android:layout_width="190dp"
-        android:layout_height="155dp"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginTop="30dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toEndOf="@+id/PatientHomeTempImage"
         app:layout_constraintTop_toBottomOf="@+id/PatientHomeVideoCall"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.035"
         app:srcCompat="@drawable/glocsensor" />
 
     <TextView
@@ -99,67 +94,65 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="36dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="104dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
         android:text="@string/PatientHomeglocText"
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/PatientHomeglocImage"
+        app:layout_constraintBottom_toTopOf="@+id/PatientHomePreImage"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/PatientHomeglocImage"
-        app:layout_constraintTop_toTopOf="@+id/PatientHomeglocImage"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintHorizontal_bias="0.861"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PatientHomeglocImage" />
 
     <ImageButton
         android:id="@+id/PatientHomeHeartImage"
-        android:layout_width="190dp"
-        android:layout_height="155dp"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="8dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.041"
+        app:layout_constraintHorizontal_bias="0.099"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PatientHomeTempImage"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.175"
         app:srcCompat="@drawable/heartsensore" />
 
     <TextView
-        android:id="@+id/PatientHomeHeartIconText"
+        android:id="@+id/PatientHomeHeartText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/PatientHomeHeartText"
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/PatientHomeHeartImage"
-        app:layout_constraintEnd_toEndOf="@+id/PatientHomeHeartImage"
-        app:layout_constraintHorizontal_bias="0.312"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/PatientHomePreText"
+        app:layout_constraintHorizontal_bias="0.274"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/PatientHomeHeartImage"
-        app:layout_constraintVertical_bias="0.98" />
+        app:layout_constraintTop_toBottomOf="@+id/PatientHomeHeartImage"
+        app:layout_constraintVertical_bias="0.027" />
 
     <ImageButton
         android:id="@+id/PatientHomePreImage"
-        android:layout_width="190dp"
-        android:layout_height="155dp"
+        android:layout_width="100dp"
+        android:layout_height="90dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="5dp"
-        android:layout_marginTop="8dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
         app:layout_constraintStart_toEndOf="@+id/PatientHomeHeartImage"
         app:layout_constraintTop_toBottomOf="@+id/PatientHomeglocImage"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.175"
         app:srcCompat="@drawable/prsensor" />
 
     <TextView
@@ -167,20 +160,21 @@
         android:layout_width="wrap_content"
         android:layout_height="16dp"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="17dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/PatientHomePreText"
         android:textColor="@color/colorPrimaryDark"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/PatientHomePreImage"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/PatientHomePreImage"
-        app:layout_constraintTop_toTopOf="@+id/PatientHomePreImage"
-        app:layout_constraintVertical_bias="0.961" />
+        app:layout_constraintHorizontal_bias="0.868"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PatientHomePreImage"
+        app:layout_constraintVertical_bias="0.024" />
 
     <View
-        android:id="@+id/PatientHomeLine"
+        android:id="@+id/PatientHometLine"
         android:layout_width="0dp"
         android:layout_height="2dp"
         android:layout_marginBottom="116dp"
@@ -189,57 +183,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientLoginButtonLogin"
         app:layout_constraintVertical_bias="0.013" />
-
-    <ImageButton
-        android:id="@+id/PatientHomeIconLocation"
-        android:layout_width="70dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="48dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:scaleType="fitXY"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/PatientHomePreText"
-        app:layout_constraintHorizontal_bias="0.53"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.997"
-        app:srcCompat="@drawable/ic_location_on_black_24px" />
-
-    <ImageButton
-        android:id="@+id/PatientHomeFamily"
-        android:layout_width="70dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="48dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/PatientHomePreText"
-        app:layout_constraintHorizontal_bias="0.782"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.997"
-        app:srcCompat="@drawable/ic_supervisor_account_black_24px" />
-
-    <ImageButton
-        android:id="@+id/PatientHomeAccount"
-        android:layout_width="70dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="48dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.997"
-        app:srcCompat="@drawable/ic_account_box_black_24px" />
 
     <ImageButton
         android:id="@+id/PatientHomeHome"
@@ -251,27 +195,11 @@
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.026"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.997"
         app:srcCompat="@drawable/ic_home_black_24px" />
-
-    <ImageButton
-        android:id="@+id/PatientHomeHeart"
-        android:layout_width="70dp"
-        android:layout_height="60dp"
-        android:layout_marginBottom="48dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.265"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.997"
-        app:srcCompat="@drawable/ic_favorite_black_24px" />
 
     <TextView
         android:id="@+id/PatientHomeHomeIconText"
@@ -288,6 +216,21 @@
         app:layout_constraintTop_toBottomOf="@+id/PatientHomeHome"
         app:layout_constraintVertical_bias="0.0" />
 
+    <ImageButton
+        android:id="@+id/PatientHomeHeart"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/PatientHomeIconLocation"
+        app:layout_constraintStart_toEndOf="@+id/PatientHomeHome"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.997"
+        app:srcCompat="@drawable/ic_favorite_black_24px" />
+
     <TextView
         android:id="@+id/PatientHomeHeartIconText"
         android:layout_width="72dp"
@@ -303,9 +246,25 @@
         app:layout_constraintTop_toBottomOf="@+id/PatientHomeHeart"
         app:layout_constraintVertical_bias="0.0" />
 
+    <ImageButton
+        android:id="@+id/PatientHomeIconLocation"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="155dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/PatientHomeFamily"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_location_on_black_24px" />
+
     <TextView
         android:id="@+id/PatientHomeIconLocationText"
-        android:layout_width="52dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
@@ -317,10 +276,41 @@
         app:layout_constraintTop_toBottomOf="@+id/PatientHomeIconLocation"
         app:layout_constraintVertical_bias="0.0" />
 
+    <ImageButton
+        android:id="@+id/PatientHomeFamily"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="48dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginStart="225dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/PatientHomeAccount"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_supervisor_account_black_24px" />
+
+    <ImageButton
+        android:id="@+id/PatientHomeAccount"
+        android:layout_width="70dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.965"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.997"
+        app:srcCompat="@drawable/ic_account_box_black_24px" />
+
     <TextView
         android:id="@+id/PatientHomeIconFamilyText"
         android:layout_width="48dp"
-        android:layout_height="19dp"
+        android:layout_height="17dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
@@ -346,6 +336,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PatientHomeAccount"
         app:layout_constraintVertical_bias="0.0" />
-
-
 </android.support.constraint.ConstraintLayout>

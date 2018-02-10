@@ -51,7 +51,7 @@
     <string name="PatientHomeTempText">Check your temperature</string>
     <string name="PatientHomeglocText">Check your Diabetes</string>
     <string name="PatientHomeHeartText">Check your Heart_Rate</string>
-    <string name="PatientHomePreText">Check your Blood Pressure</string>
+    <string name="PatientHomePreText">Check your Pressure</string>
 
 
     <string name="PatientHomeHomeIconText">Home</string>
