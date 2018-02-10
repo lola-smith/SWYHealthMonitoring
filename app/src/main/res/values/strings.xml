@@ -78,6 +78,14 @@
     <string name="PatientAccountInformationName">Name</string>
     <string name="PatientAccountInformationPhone">phone</string>
     <string name="PatientAccountInformationconfirm">Confirm</string>
+    <string name="PatientAccountEmailAndPassText">Update Email and Password :</string>
+    <string name="PatientAccountEmailAndPassEmail">Email</string>
+    <string name="PatientAccountEmailAndPassCurrentPass">Current Password</string>
+    <string name="PatientAccountEmailAndPassNewPass">New Password</string>
+    <string name="PatientAccountEmailAndPassConfirmPass">Confirm Password</string>
+    <string name="PatientAccountEmailAndPassConfirmChange">Confirm Change</string>
+    <string name="PatientSupportText">Having Trouble using SWY Health ? We\'re here to help .</string>
+    <string name="PatientSupportAskQuestion">Ask Question</string>
 
 
 </resources>

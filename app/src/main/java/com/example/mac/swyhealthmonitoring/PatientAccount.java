@@ -16,6 +16,8 @@ public class PatientAccount extends AppCompatActivity {
         final ImageButton PatientAccountHome = (ImageButton) findViewById(R.id.PatientAccountHome);
         final ImageButton PatientAccountAccount = (ImageButton) findViewById(R.id.PatientAccountAccount);
         final TextView PatientAccountPAtientInfoText =(TextView) findViewById(R.id.PatientAccountPAtientInfoText);
+        final  TextView PatientAccountPAtientEmailAndpassText =(TextView) findViewById(R.id.PatientAccountPAtientEmailAndpassText);
+        final  TextView PatientAccountCustomerSupportText =(TextView) findViewById(R.id.PatientAccountCustomerSupportText);
 
         PatientAccountHome.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,6 +38,20 @@ public class PatientAccount extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent(PatientAccount.this,PatientAccountInformation.class);
+                startActivity(intent);
+            }
+        });
+        PatientAccountPAtientEmailAndpassText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(PatientAccount.this,PatientAccountEmailAndPass.class);
+                startActivity(intent);
+            }
+        });
+        PatientAccountCustomerSupportText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(PatientAccount.this,PatientSupport.class);
                 startActivity(intent);
             }
         });

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class PatientForgetPassword extends AppCompatActivity {
 
@@ -14,7 +15,7 @@ public class PatientForgetPassword extends AppCompatActivity {
         setContentView(R.layout.activity_patient_forget_password);
 
         final Button PatientForgetPasswordSubmit = (Button) findViewById(R.id.PatientForgetPasswordSubmit);
-        final EditText PatientForgetPasswordHint = (EditText) findViewById(R.id.PatientForgetPasswordHint);
+        final TextView PatientForgetPasswordHint = (TextView) findViewById(R.id.PatientForgetPasswordHint);
         PatientForgetPasswordSubmit .setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
