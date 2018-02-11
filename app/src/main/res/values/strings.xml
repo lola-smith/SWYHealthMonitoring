@@ -78,6 +78,28 @@
     <string name="PatientAccountInformationName">Name</string>
     <string name="PatientAccountInformationPhone">phone</string>
     <string name="PatientAccountInformationconfirm">Confirm</string>
+    <string name="PatientMyHealthMyHealthText">My Health</string>
+    <string name="PatientMyHeartLastReadText">Last Read</string>
+    <string name="PatientMyHealthTemperatureText">Temperature</string>
+    <string name="PatientFamilyAddFamilyBotton">Add</string>
+    <string name="PatientFamillyAddFamilyText">\@UserName</string>
+    <string name="PatientFamilyData">Date</string>
+    <string name="PatientFamilyNotification">Notification</string>
+    <string name="PatientFamilyRelation">Relation</string>
+    <string name="PatientFamilyName">Name</string>
+    <string name="PatientFamilyAddFamily">Add Family</string>
+    <string name="PatientVedioAddDoctorButton">Add</string>
+    <string name="PatientVedioAddDoctorText">\@UserName</string>
+    <string name="DoctorVedioAddPatientButton">Add</string>
+    <string name="DoctorVedioAddPatientText">\@UserName</string>
+    <string name="PatientMyHealthHeartRateText">HeartRate</string>
+
+    <string name="PatientMyHealthPressureText">Blood Pressure</string>
+    <string name="PatientMyHealthGlucoseText">Glucose Level</string>
+    <string name="PatientMyHealthTempReadText"> 37 c </string>
+    <string name="PatientMyHealthHeartRateReadText"> 70 b/m</string>
+    <string name="PatientMyHealthPressureReadText">120/70</string>
+    <string name="PatientMyHealthGlucoseReadText"> 90 mg/dL </string>
 
 
 </resources>
