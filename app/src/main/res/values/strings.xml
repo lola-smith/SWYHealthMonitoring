@@ -87,5 +87,18 @@
     <string name="PatientSupportText">Having Trouble using SWY Health ? We\'re here to help .</string>
     <string name="PatientSupportAskQuestion">Ask Question</string>
 
+    <string name="DoctorHomeStartVideo">Start Video Call</string>
+    <string name="DoctorHomeTevt">Home</string>
+    <string name="DoctorHomeHomeImage">Home</string>
+    <string name="DoctorHomeHometext">Home</string>
+    <string name="DoctorHomeAccounttext">Account</string>
+
+    <string name="DoctorVideoCallButton">Add Patient</string>
+    <string name="DoctorVideoCallPlainText">Enter patient user Name</string>
+    <string name="DoctorVideoCallTextName">Name</string>
+    <string name="DoctorVideoCallTextVideo">Start Video Call</string>
+
+
+
 
 </resources>

@@ -28,7 +28,9 @@
         <activity android:name=".PatientAccount" />
         <activity android:name=".PatientAccountInformation" />
         <activity android:name=".PatientAccountEmailAndPass" />
-        <activity android:name=".PatientSupport"></activity>
+        <activity android:name=".PatientSupport" />
+        <activity android:name=".DoctorHome" />
+        <activity android:name=".DoctorVideoCall" />
     </application>
 
 </manifest>
