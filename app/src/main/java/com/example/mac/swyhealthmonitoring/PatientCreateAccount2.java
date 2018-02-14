@@ -16,7 +16,7 @@ public class PatientCreateAccount2 extends AppCompatActivity {
         PatientCreateAccount2CreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent =new Intent(PatientCreateAccount2.this,PatientHome.class);
+                Intent intent =new Intent(PatientCreateAccount2.this,DoctorHome.class);
                 startActivity(intent);
             }
         });

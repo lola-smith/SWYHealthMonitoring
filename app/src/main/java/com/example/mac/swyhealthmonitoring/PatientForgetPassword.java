@@ -1,5 +1,6 @@
 package com.example.mac.swyhealthmonitoring;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,8 @@ public class PatientForgetPassword extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 PatientForgetPasswordHint.setText(getString(R.string.PatientForgetPasswordHint1));
+                Intent intent =new Intent(PatientForgetPassword.this,PatientLogin.class);
+                startActivity(intent);
             }
         });
     }

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mac.swyhealthmonitoring.HeartRateSetting">
+
+    <ImageView
+        android:id="@+id/SWYImageView"
+        android:layout_width="193dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.068"
+        app:srcCompat="@drawable/swylogo" />
+
+    <TextView
+        android:id="@+id/HeartRateSettingHistory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/HeartRateSettingHistory"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.185"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SWYImageView"
+        app:layout_constraintVertical_bias="0.019" />
+
+    <RadioGroup
+        android:id="@+id/HeartRateSettingHistoryRadio"
+        android:layout_width="300dp"
+        android:layout_height="132dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HeartRateSettingHistory"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/HeartRateSettingHistoryRadio1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/HeartRateSettingHistoryRadio1"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/HeartRateSettingHistoryRadio2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/HeartRateSettingHistoryRadio2"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/HeartRateSettingHistoryRadio3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/HeartRateSettingHistoryRadio3"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/HeartRateSettingHistoryRadio4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/HeartRateSettingHistoryRadio4"
+            android:textSize="18sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/HeartRateSettingAutoReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/HeartRateSettingAutoReading"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.209"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HeartRateSettingHistoryRadio"
+        app:layout_constraintVertical_bias="0.066" />
+
+    <RadioGroup
+        android:id="@+id/HeartRateSettingAutoReadingRadio"
+        android:layout_width="300dp"
+        android:layout_height="133dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HeartRateSettingAutoReading"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/HeartRateSettingAutoReadingRadio1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/HeartRateSettingAutoReadingRadio1"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/HeartRateSettingAutoReadingRadio2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/HeartRateSettingAutoReadingRadio2"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/HeartRateSettingAutoReadingRadio3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/HeartRateSettingAutoReadingRadio3"
+            android:textSize="18sp" />
+
+        <RadioButton
+            android:id="@+id/HeartRateSettingAutoReadingRadio4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/HeartRateSettingAutoReadingRadio4"
+            android:textSize="18sp" />
+    </RadioGroup>
+</android.support.constraint.ConstraintLayout>

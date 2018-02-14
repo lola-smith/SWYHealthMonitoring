@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mac.swyhealthmonitoring.PatientHomeTemperature">
+
+    <ImageView
+        android:id="@+id/SWYImageView"
+        android:layout_width="192dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/swylogo" />
+
+    <ImageView
+        android:id="@+id/PatientHomeTempImage"
+        android:layout_width="0dp"
+        android:layout_height="172dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SWYImageView"
+        app:layout_constraintVertical_bias="0.086"
+        app:srcCompat="@drawable/tempsensor" />
+
+    <Button
+        android:id="@+id/PatientHomeTempButton"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/PatientHomeTempButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PatientHomeTempImage"
+        app:layout_constraintVertical_bias="0.1" />
+
+    <ImageButton
+        android:id="@+id/PatientHomeTempHistoryIcon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/PatientHomeHeartRateHistory"
+        app:layout_constraintHorizontal_bias="0.592"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/HomePatientHeartRateSettingIcon"
+        app:layout_constraintVertical_bias="0.45"
+        app:srcCompat="@drawable/ic_settings_black_48px" />
+
+    <ImageButton
+        android:id="@+id/PatientHomeTempSettingIcon"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/PatientHomeHeartRateSetting"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PatientHomeTempImage"
+        app:layout_constraintVertical_bias="0.507"
+        app:srcCompat="@drawable/ic_history_black_48px" />
+
+    <TextView
+        android:id="@+id/PatientHomeTempHistory"
+        android:layout_width="187dp"
+        android:layout_height="39dp"
+        android:layout_marginBottom="112dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/PatientHomeTempHistory"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PatientHomeHeartRateSetting"
+        app:layout_constraintVertical_bias="0.64" />
+
+    <TextView
+        android:id="@+id/PatientHomeTempSetting"
+        android:layout_width="89dp"
+        android:layout_height="31dp"
+        android:layout_marginBottom="28dp"
+        android:layout_marginEnd="124dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/PatientHomeTempSetting"
+        android:textColor="@android:color/background_dark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.514"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PatientHomeHeartReatButton"
+        app:layout_constraintVertical_bias="0.23" />
+
+    <View
+        android:id="@+id/PatientHometLine"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginBottom="168dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PatientHomeHeartReatButton" />
+
+</android.support.constraint.ConstraintLayout>

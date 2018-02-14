@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.mac.swyhealthmonitoring.PressureHistory">
+
+    <ImageView
+        android:id="@+id/SWYImageView"
+        android:layout_width="193dp"
+        android:layout_height="75dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="15dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.068"
+        app:srcCompat="@drawable/swylogo" />
+
+    <TableRow
+        android:id="@+id/PressureHistoryTable"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/SWYImageView"
+        app:layout_constraintVertical_bias="0.083"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/PressureHistoryReading"
+            android:layout_weight="1"
+            android:background="#cac9c9"
+            android:gravity="center"
+            android:padding="20dip"
+            android:text="@string/PressureHistoryReading"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/PressureHistoryٍDate"
+            android:layout_weight="1"
+            android:background="#cac9c9"
+            android:gravity="center"
+            android:padding="20dip"
+            android:text="@string/PressureHistoryٍDate"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/PressureHistoryٍTime"
+            android:layout_weight="1"
+            android:background="#cac9c9"
+            android:gravity="center"
+            android:padding="20dip"
+            android:text="@string/PressureHistoryٍTime"
+            android:textColor="#000000" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/PressureHistoryTableR1"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PressureHistoryTable"
+        app:layout_constraintVertical_bias="0.136"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/PressureHistoryٍReading1"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="20dip"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/PressureHistoryٍDate1"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="20dip"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/PressureHistoryٍTime1"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="20dip"
+            android:textColor="#000000" />
+
+
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/PressureHistoryTableR2"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PressureHistoryTableR1"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/PressureHistoryٍReading2"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="20dip"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/PressureHistoryٍDate2"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="20dip"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/PressureHistoryٍTime2"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="20dip"
+            android:textColor="#000000" />
+
+
+    </TableRow>
+
+
+    <TableRow
+        android:id="@+id/PressureHistoryTableR3"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginBottom="120dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PressureHistoryTableR2"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/PressureHistoryٍReading3"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="20dip"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/PressureHistoryٍDate3"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="20dip"
+            android:textColor="#000000" />
+
+
+        <TextView
+            android:id="@+id/PressureHistoryٍTime3"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="20dip"
+            android:textColor="#000000" />
+
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/PressureHistoryTableR4"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PressureHistoryTableR3"
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:id="@+id/PressureHistoryٍReading4"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="20dip"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/PressureHistoryٍDate4"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="20dip"
+            android:textColor="#000000" />
+
+
+        <TextView
+            android:id="@+id/PressureHistoryٍTime4"
+            android:layout_weight="1"
+            android:background="#dcdcdc"
+            android:gravity="center"
+            android:padding="20dip"
+            android:textColor="#000000" />
+
+
+    </TableRow>
+
+</android.support.constraint.ConstraintLayout>

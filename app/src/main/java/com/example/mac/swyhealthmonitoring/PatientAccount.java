@@ -15,10 +15,14 @@ public class PatientAccount extends AppCompatActivity {
         setContentView(R.layout.activity_patient_account);
         final ImageButton PatientAccountHome = (ImageButton) findViewById(R.id.PatientAccountHome);
         final ImageButton PatientAccountAccount = (ImageButton) findViewById(R.id.PatientAccountAccount);
+        final ImageButton PatientAccountIconLocation =(ImageButton) findViewById(R.id.PatientAccountIconLocation);
+        final  ImageButton PatientAccountFamily =(ImageButton) findViewById(R.id.PatientAccountFamily);
+        final ImageButton PatientAccountHeart =(ImageButton) findViewById(R.id.PatientAccountHeart);
         final TextView PatientAccountPAtientInfoText =(TextView) findViewById(R.id.PatientAccountPAtientInfoText);
         final  TextView PatientAccountPAtientEmailAndpassText =(TextView) findViewById(R.id.PatientAccountPAtientEmailAndpassText);
         final  TextView PatientAccountCustomerSupportText =(TextView) findViewById(R.id.PatientAccountCustomerSupportText);
-
+        final TextView PatientAccountAboutUsText =(TextView) findViewById(R.id.PatientAccountAboutUsText);
+        final TextView PatientAccountLogout =(TextView) findViewById(R.id.PatientAccountLogout);
         PatientAccountHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,6 +34,29 @@ public class PatientAccount extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent(PatientAccount.this,PatientAccount.class);
+                startActivity(intent);
+            }
+        });
+
+        PatientAccountIconLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(PatientAccount.this,PatientHospitalMap.class);
+                startActivity(intent);
+            }
+        });
+        PatientAccountFamily.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(PatientAccount.this,PatientFamily.class);
+                startActivity(intent);
+            }
+        });
+
+        PatientAccountHeart.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(PatientAccount.this,PatientMyHealth.class);
                 startActivity(intent);
             }
         });
@@ -52,6 +79,22 @@ public class PatientAccount extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent =new Intent(PatientAccount.this,PatientSupport.class);
+                startActivity(intent);
+            }
+        });
+
+        PatientAccountAboutUsText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(PatientAccount.this,PatientAboutUs.class);
+                startActivity(intent);
+            }
+        });
+
+        PatientAccountLogout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(PatientAccount.this,PatientLogin.class);
                 startActivity(intent);
             }
         });
