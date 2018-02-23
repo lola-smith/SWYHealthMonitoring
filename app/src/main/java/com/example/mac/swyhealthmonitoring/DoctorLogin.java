@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class DoctorLogin extends AppCompatActivity {
@@ -14,6 +15,7 @@ public class DoctorLogin extends AppCompatActivity {
         setContentView(R.layout.activity_doctor_login);
         final TextView DoctorLoginForgetPassword= (TextView) findViewById(R.id.DoctorLoginForgetPassword);
         final TextView DoctorLogincreataccount=(TextView) findViewById(R.id.DoctorLogincreataccount);
+        final Button  DoctorLoginButtonLogin =(Button) findViewById(R.id.DoctorLoginButtonLogin);
 
         DoctorLoginForgetPassword.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -28,6 +30,13 @@ public class DoctorLogin extends AppCompatActivity {
                 Intent intent =new Intent(DoctorLogin.this,DoctorCreateAccount.class);
                 startActivity(intent);
 
+            }
+        });
+        DoctorLoginButtonLogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent =new Intent(DoctorLogin.this,DoctorHome.class);
+                startActivity(intent);
             }
         });
 

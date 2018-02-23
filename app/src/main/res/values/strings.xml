@@ -2,27 +2,31 @@
     <string name="app_name">SWYHealthMonitoring</string>
     <string name="MainPatientButton">Patient Login</string>
     <string name="MainDoctorButton">Doctor Login</string>
+
     <string name="PatientLoginUserName">User Name</string>
     <string name="PatientLoginPassword">Password</string>
     <string name="PatientLoginButtonLogin">Login</string>
     <string name="PatientLoginForgetPassword">I Forget My Password</string>
-
     <string name="PatientLoginText1">Don\'t have an account?</string>
-    <string name="PatientLogincreataccount">create account</string>
+    <string name="PatientLogincreataccount">Create account</string>
+
     <string name="DoctorLoginUserName">User Name</string>
     <string name="DoctorLoginPassword">Password</string>
     <string name="DoctorLoginButtonLogin">Login</string>
     <string name="DoctorLoginForgetPassword">I Forget My Password</string>
     <string name="DoctorLoginText1">Don\'t have an account?</string>
     <string name="DoctorLogincreataccount">Create account</string>
+
     <string name="PatientForgetPassword">User Name</string>
     <string name="PatientForgetPasswordHint">we will Send a masseg with your forgetten password to your Email</string>
     <string name="PatientForgetPasswordSubmit">Submit</string>
     <string name="PatientForgetPasswordHint1">Your Password Has been Sent </string>
+
     <string name="DoctorForgetPassword">User Name</string>
     <string name="DoctorForgetPasswordHint">we will Send a masseg with your forgetten password to your Email</string>
     <string name="DoctorForgetPasswordSubmit">Submit</string>
     <string name="DoctorForgetPasswordHint1">Your Password Has been Sent </string>
+
     <string name="PatientCreateAccountEmail">Email</string>
     <string name="PatientCreateAccountDate">Date</string>
     <string name="PatientCreateAccountPassword">Password</string>
@@ -30,11 +34,13 @@
     <string name="PatientCreateAccountNext">Next</string>
     <string name="PatientCreateAccountText">Have an account already?</string>
     <string name="PatientCreateAccountLogin">Login</string>
+
     <string name="PatientCreateAccount2UserName">User Name</string>
     <string name="PatientCreateAccount2Name">Name</string>
     <string name="PatientCreateAccount2Gender">Gender</string>
     <string name="PatientCreateAccount2Iagree">I agree</string>
     <string name="PatientCreateAccount2CreateAccount">Create Account</string>
+
     <string name="DoctorCreateAccountEmail">Email</string>
     <string name="DoctorCreateAccountDate">Date</string>
     <string name="DoctorCreateAccountPassword">Password</string>
@@ -42,18 +48,19 @@
     <string name="DoctorCreateAccountNext">Next</string>
     <string name="DoctorCreateAccountText">Have an account already?</string>
     <string name="DoctorCreateAccountLogin">Login</string>
+
     <string name="DoctorCreateAccount2UserName">User Name</string>
     <string name="DoctorCreateAccount2Name">Name</string>
     <string name="DoctorCreateAccount2Gender">Gender</string>
     <string name="DoctorCreateAccount2Iagree">I agree</string>
     <string name="DoctorCreateAccount2CreateAccount">Create Account</string>
+
+
     <string name="PatientHomeVideoCall"><![CDATA[Start video call with your doctor now >]]></string>
     <string name="PatientHomeTempText">Check your temperature</string>
     <string name="PatientHomeglocText">Check your Diabetes</string>
     <string name="PatientHomeHeartText">Check your Heart_Rate</string>
     <string name="PatientHomePreText">Check your Pressure</string>
-
-
     <string name="PatientHomeHomeIconText">Home</string>
     <string name="PatientHomeHeartIconText"> My Health</string>
     <string name="PatientHomeIconLocationText">Hospital</string>
@@ -78,28 +85,199 @@
     <string name="PatientAccountInformationName">Name</string>
     <string name="PatientAccountInformationPhone">phone</string>
     <string name="PatientAccountInformationconfirm">Confirm</string>
-    <string name="PatientMyHealthMyHealthText">My Health</string>
-    <string name="PatientMyHeartLastReadText">Last Read</string>
-    <string name="PatientMyHealthTemperatureText">Temperature</string>
-    <string name="PatientFamilyAddFamilyBotton">Add</string>
-    <string name="PatientFamillyAddFamilyText">\@UserName</string>
-    <string name="PatientFamilyData">Date</string>
-    <string name="PatientFamilyNotification">Notification</string>
-    <string name="PatientFamilyRelation">Relation</string>
-    <string name="PatientFamilyName">Name</string>
-    <string name="PatientFamilyAddFamily">Add Family</string>
-    <string name="PatientVedioAddDoctorButton">Add</string>
-    <string name="PatientVedioAddDoctorText">\@UserName</string>
-    <string name="DoctorVedioAddPatientButton">Add</string>
-    <string name="DoctorVedioAddPatientText">\@UserName</string>
-    <string name="PatientMyHealthHeartRateText">HeartRate</string>
+    <string name="PatientAccountEmailAndPassText">Update Email and Password :</string>
+    <string name="PatientAccountEmailAndPassEmail">Email</string>
+    <string name="PatientAccountEmailAndPassCurrentPass">Current Password</string>
+    <string name="PatientAccountEmailAndPassNewPass">New Password</string>
+    <string name="PatientAccountEmailAndPassConfirmPass">Confirm Password</string>
+    <string name="PatientAccountEmailAndPassConfirmChange">Confirm Change</string>
 
+    <string name="PatientSupportText">Having Trouble using SWY Health ? We\'re here to help .</string>
+    <string name="PatientSupportAskQuestion">Ask Question</string>
+
+    <string name="DoctorHomeStartVideo">Start Video Call</string>
+    <string name="DoctorHomeTevt">Home</string>
+    <string name="DoctorHomeHomeImage">Home</string>
+    <string name="DoctorHomeHometext">Home</string>
+    <string name="DoctorHomeAccounttext">Account</string>
+
+    <string name="DoctorVideoCallButton">Add Patient</string>
+    <string name="DoctorVideoCallPlainText">Enter patient user Name</string>
+    <string name="DoctorVideoCallTextName">Name</string>
+    <string name="DoctorVideoCallTextVideo">Start Video Call</string>
+
+    <string name="PatientVideoCallButton">Add Doctor</string>
+    <string name="PatientVideoCallTextName">Name</string>
+    <string name="PatientVideoCallTextVideo">Start Video Call</string>
+    <string name="PatientVideoCallPlainText">enter doctor name</string>
+
+
+    <string name="PatientHospitalHospital">Hospital</string>
+    <string name="PatientHospitalKm">KM</string>
+    <string name="PatientHospitalHour">Hour</string>
+    <string name="title_activity_patient_hospital_map">Map</string>
+
+
+    <string name="PatientMyHealthHeartRateText">HeartRate</string>
     <string name="PatientMyHealthPressureText">Blood Pressure</string>
     <string name="PatientMyHealthGlucoseText">Glucose Level</string>
     <string name="PatientMyHealthTempReadText"> 37 c </string>
     <string name="PatientMyHealthHeartRateReadText"> 70 b/m</string>
     <string name="PatientMyHealthPressureReadText">120/70</string>
     <string name="PatientMyHealthGlucoseReadText"> 90 mg/dL </string>
+    <string name="PatientMyHealthMyHealthText">My Health</string>
+    <string name="PatientMyHeartLastReadText">Last Read</string>
+    <string name="PatientMyHealthTemperatureText">Temperature</string>
 
+
+    <string name="PatientFamilyData">Date</string>
+    <string name="PatientFamilyNotification">Notification</string>
+    <string name="PatientFamilyRelation">Relation</string>
+    <string name="PatientFamilyName">Name</string>
+    <string name="PatientFamilyAddFamily">Add Family</string>
+
+    <string name="PatientFamilyAddFamilyBotton">Add</string>
+    <string name="PatientFamillyAddFamilyText">UserName</string>
+
+    <string name="DoctorVedioAddPatientButton">Add</string>
+    <string name="DoctorVedioAddPatientText">UserName</string>
+
+    <string name="PatientVedioAddDoctorButton">Add</string>
+    <string name="PatientVedioAddDoctorText">UserName</string>
+
+    <string name="DoctorAccountName">Name</string>
+    <string name="DoctorAccountUserName">UserName</string>
+    <string name="DoctorAccountLogout">Logout</string>
+    <string name="DoctorAccountInfotext">Doctor Info</string>
+    <string name="DoctorAccountEmailandPass"><![CDATA[Email & password]]></string>
+    <string name="DoctorAccountHomeText">Home</string>
+
+
+    <string name="DoctorAccountAccountText">Account</string>
+    <string name="DoctorAccountInfoSpecialisty">Speciality</string>
+    <string name="DoctorAccountInfoName">Name</string>
+    <string name="DoctorAccountInfoPhone">Phone</string>
+    <string name="DoctorAccountInfoConfirm">Confirm</string>
+    <string name="DoctorAccountEmail">Email</string>
+    <string name="DoctorAccountCurrentPass">Current Password</string>
+    <string name="DoctorAccountNewPass">New Password</string>
+    <string name="DoctorAccountConfirmPass">Confirm Password</string>
+    <string name="DoctorAccountConfirmChange">Confirm Password</string>
+    <string name="DoctorAccountEmailAndPassConfirmChange">Confirm Change</string>
+    <string name="DoctorVideoCallUser1">User 1</string>
+    <string name="DoctorAccountCustomerSupportText">Customer Support</string>
+    <string name="DoctorAccountAboutUsText">About Us</string>
+
+    <string name="DoctorSupportAskQuestion">Ask Question</string>
+    <string name="DoctorSupportText">Having Trouble using SWY Health ? We\'re here to help .</string>
+
+    <string name="PatientMyHealthStartReading">Start Reading</string>
+
+    <string name="PatientFamilyAddFamily1">Add Family</string>
+
+
+    <string name="PatientAskQuestionText">Ask Our Support Team A Question</string>
+    <string name="PatientAskQuestionComplainText">write your question here ?</string>
+    <string name="PatientAskQuestionComplainPhoto">+ Add Photo</string>
+    <string name="PatientAskQuestionSubmit">Submit</string>
+
+    <string name="DoctorAskQuestionText">Ask Our Support Team A Question</string>
+    <string name="DoctorAskQuestionComplainText">write your question here ?</string>
+    <string name="DoctorAskQuestionComplainPhoto">+ Add Photo</string>
+    <string name="DoctorAskQuestionSubmit">Submit</string>
+    <string name="DoctorAddPatient">Add Patient</string>
+    <string name="DoctorAddPatientText">Patient User Name</string>
+    <string name="DoctorAddPatientBotton">Add</string>
+    <string name="PatientAddDoctor">Add Doctor</string>
+    <string name="PatientAddDoctorText">Doctor User Name</string>
+    <string name="PatientAddDoctorBotton">Add</string>
+
+    <string name="PatientHomeTempButton">Start reading</string>
+    <string name="PatientHomeTempHistory">Seen history</string>
+    <string name="PatientHomeTempSetting">Setting</string>
+
+    <string name="PatientHomeHeartRateButton">Start reading</string>
+    <string name="PatientHomeHeartRateHistory">Seen history</string>
+    <string name="PatientHomeHeartRateSetting">Setting</string>
+
+    <string name="PatientHomeSugerButton">Start reading</string>
+    <string name="PatientHomeSugerHistory">Seen history</string>
+    <string name="PatientHomeSugerSetting">Setting</string>
+
+    <string name="PatientHomePressureButton">Start reading</string>
+    <string name="PatientHomePressureHistory">Seen history</string>
+    <string name="PatientHomePressureSetting">Setting</string>
+    <string name="TempHistoryٍReading">Reading</string>
+    <string name="TempHistoryٍDate">Date</string>
+    <string name="TempHistoryٍTime">Time</string>
+    <string name="PressureHistoryReading">Reading</string>
+    <string name="PressureHistoryٍDate">Date</string>
+    <string name="PressureHistoryٍTime">Time</string>
+    <string name="SugerHistoryReading">Reading</string>
+    <string name="SugerHistoryٍDate">Date</string>
+    <string name="SugerHistoryٍTime">Time</string>
+
+    <string name="HeartRateHistoryReading">Reading</string>
+    <string name="HeartRateHistoryٍDate">Date</string>
+    <string name="HeartRateHistoryٍTime">Time</string>
+
+
+    <string name="TempSettingHistory">You Can See History Of</string>
+    <string name="TempSettingAutoReading">Automatic Updating Every</string>
+    <string name="TempSettingHistoryRadio1">1 Month</string>
+    <string name="TempSettingHistoryRadio2">3 Month</string>
+    <string name="TempSettingHistoryRadio3">6 Month</string>
+    <string name="TempSettingHistoryRadio4">1 Year</string>
+    <string name="TempSettingAutoReadingRadio1"> Day</string>
+    <string name="TempSettingAutoReadingRadio2">2 Days</string>
+    <string name="TempSettingAutoReadingRadio3"> Week</string>
+    <string name="TempSettingAutoReadingRadio4">2 Week</string>
+
+    <string name="PressureSettingHistory">You Can See History Of</string>
+    <string name="PressureSettingAutoReading">Automatic Updating Every</string>
+    <string name="PressureSettingHistoryRadio1">1 Month</string>
+    <string name="PressureSettingHistoryRadio2">3 Month</string>
+    <string name="PressureSettingHistoryRadio3">6 Month</string>
+    <string name="PressureSettingHistoryRadio4">1 Year</string>
+    <string name="PressureSettingAutoReadingRadio1"> Day</string>
+    <string name="PressureSettingAutoReadingRadio2">2 Days</string>
+    <string name="PressureSettingAutoReadingRadio3"> Week</string>
+    <string name="PressureSettingAutoReadingRadio4">2 Week</string>
+
+
+    <string name="SugerSettingHistory">You Can See History Of</string>
+    <string name="SugerSettingAutoReading">Automatic Updating Every</string>
+    <string name="SugerSettingHistoryRadio1">1 Month</string>
+    <string name="SugerSettingHistoryRadio2">3 Month</string>
+    <string name="SugerSettingHistoryRadio3">6 Month</string>
+    <string name="SugerSettingHistoryRadio4">1 Year</string>
+    <string name="SugerSettingAutoReadingRadio1"> Day</string>
+    <string name="SugerSettingAutoReadingRadio2">2 Days</string>
+    <string name="SugerSettingAutoReadingRadio3"> Week</string>
+    <string name="SugerSettingAutoReadingRadio4">2 Week</string>
+
+    <string name="HeartRateSettingHistory">You Can See History Of</string>
+    <string name="HeartRateSettingAutoReading">Automatic Updating Every</string>
+    <string name="HeartRateSettingHistoryRadio1">1 Month</string>
+    <string name="HeartRateSettingHistoryRadio2">3 Month</string>
+    <string name="HeartRateSettingHistoryRadio3">6 Month</string>
+    <string name="HeartRateSettingHistoryRadio4">1 Year</string>
+    <string name="HeartRateSettingAutoReadingRadio1"> Day</string>
+    <string name="HeartRateSettingAutoReadingRadio2">2 Days</string>
+    <string name="HeartRateSettingAutoReadingRadio3"> Week</string>
+    <string name="HeartRateSettingAutoReadingRadio4">2 Week</string>
+    <string name="PatientAboutUsAimText">The Aim Of Our App:</string>
+    <string name="PatientAboutUsContentText">SWY is an innovative solution for detecting and locating a person who\'s health in grave danger. It is also a smartphone synced mobile health monitoring bracelet capable of reading a human\'s vital signs (heart rate , body-temperature , pressure and blood suger). 
+
+-this project is designed for remotely monitoring patients when no one with them .  If the bracelet detects life threatening vital readings, the phone synced to the bracelet will automatically alert their family.
+
+</string>
+
+    <string name="DoctorAboutUsAimText">The Aim Of Our App:</string>
+    <string name="DoctorAboutUsContentText">SWY is an innovative solution for detecting and locating a person who\'s health in grave danger. It is also a smartphone synced mobile health monitoring bracelet capable of reading a human\'s vital signs (heart rate , body-temperature , pressure and blood suger). 
+
+-this project is designed for remotely monitoring patients when no one with them .  If the bracelet detects life threatening vital readings, the phone synced to the bracelet will automatically alert their family.
+
+</string>
 
 </resources>

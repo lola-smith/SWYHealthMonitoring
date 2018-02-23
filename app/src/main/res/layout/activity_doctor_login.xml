@@ -23,7 +23,7 @@
 
     <EditText
         android:id="@+id/DoctorLoginUserName"
-        android:layout_width="312dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="333dp"
         android:layout_marginEnd="85dp"
@@ -40,7 +40,7 @@
     <EditText
 
         android:id="@+id/DoctorLoginPassword"
-        android:layout_width="334dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="246dp"
         android:layout_marginEnd="85dp"
@@ -57,7 +57,7 @@
     <Button
         android:id="@+id/DoctorLoginButtonLogin"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="171dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="147dp"
         android:layout_marginEnd="148dp"
@@ -76,7 +76,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="20dp"
-        android:layout_marginEnd="224dp"
+        android:layout_marginEnd="100dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="13dp"
         android:text="@string/DoctorLoginForgetPassword"
@@ -84,8 +84,10 @@
         android:textStyle="italic"
         app:layout_constraintBottom_toTopOf="@+id/DoctorLoginButtonLogin"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.132"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DoctorLoginPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/DoctorLoginPassword"
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/DoctorLoginLine"
@@ -105,8 +107,8 @@
         android:layout_width="wrap_content"
         android:layout_height="35dp"
         android:layout_marginBottom="20dp"
-        android:layout_marginEnd="289dp"
-        android:layout_marginStart="37dp"
+        android:layout_marginEnd="300dp"
+        android:layout_marginStart="27dp"
         android:layout_marginTop="145dp"
         android:text="@string/DoctorLoginText1"
         android:textSize="18sp"
@@ -121,19 +123,19 @@
         android:id="@+id/DoctorLogincreataccount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="20dp"
-        android:layout_marginEnd="27dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="171dp"
+        android:layout_marginTop="80dp"
         android:text="@string/DoctorLogincreataccount"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toEndOf="@+id/DoctorLoginText1"
         app:layout_constraintTop_toBottomOf="@+id/DoctorLoginPassword"
-        app:layout_constraintVertical_bias="0.8" />
+        app:layout_constraintVertical_bias="0.863" />
 
 
 </android.support.constraint.ConstraintLayout>

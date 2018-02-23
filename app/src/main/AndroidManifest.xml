@@ -2,6 +2,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mac.swyhealthmonitoring">
 
+    <!--
+         The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but you must specify either coarse or fine
+         location permissions for the 'MyLocation' functionality. 
+    -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -27,11 +35,48 @@
         <activity android:name=".PatientHome" />
         <activity android:name=".PatientAccount" />
         <activity android:name=".PatientAccountInformation" />
+        <activity android:name=".PatientAccountEmailAndPass" />
+        <activity android:name=".PatientSupport" />
+        <activity android:name=".DoctorHome" />
+        <activity android:name=".DoctorVideoCall" />
+        <activity android:name=".PatientVideoCall" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".PatientHospitalMap"
+            android:label="@string/title_activity_patient_hospital_map" />
         <activity android:name=".PatientMyHealth" />
-        <activity android:name=".PatientFamilyAddFamily" />
         <activity android:name=".PatientFamily" />
-        <activity android:name=".PatientVedioAddDoctor" />
-        <activity android:name=".DoctorVedioAddPatient"></activity>
+        <activity android:name=".DoctorAccountInfo" />
+        <activity android:name=".DoctorAccountEmailAndPass" />
+        <activity android:name=".DoctorAccount" />
+        <activity android:name=".DoctorSupport" />
+        <activity android:name=".PatientAskQuestion" />
+        <activity android:name=".DoctorAskQuestion" />
+        <activity android:name=".PatientAboutUs" />
+        <activity android:name=".PatientHomeHeartRate" />
+        <activity android:name=".HeartRateHistory" />
+        <activity android:name=".HeartRateSetting" />
+        <activity android:name=".DoctorAboutUs" />
+        <activity android:name=".PatientHomePressure" />
+        <activity android:name=".PressureHistory" />
+        <activity android:name=".PressureSetting" />
+        <activity android:name=".PatientHomeSuger" />
+        <activity android:name=".SugerSetting" />
+        <activity android:name=".SugerHistory" />
+        <activity android:name=".PatientHomeTemperature" />
+        <activity android:name=".TempHistory" />
+        <activity android:name=".TempSetting"></activity>
     </application>
 
 </manifest>

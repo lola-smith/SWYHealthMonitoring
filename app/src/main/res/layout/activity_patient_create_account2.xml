@@ -23,7 +23,7 @@
 
     <EditText
         android:id="@+id/PatientCreateAccount2UserName"
-        android:layout_width="257dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="360dp"
         android:layout_marginEnd="85dp"
@@ -39,7 +39,7 @@
 
     <EditText
         android:id="@+id/PatientCreateAccount2Name"
-        android:layout_width="262dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="262dp"
         android:layout_marginEnd="85dp"
@@ -57,7 +57,7 @@
 
     <EditText
         android:id="@+id/PatientCreateAccount2Gender"
-        android:layout_width="261dp"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="175dp"
         android:layout_marginEnd="85dp"
@@ -75,7 +75,7 @@
 
     <CheckBox
         android:id="@+id/PatientCreateAccount2Iagree"
-        android:layout_width="262dp"
+        android:layout_width="300dp"
         android:layout_height="41dp"
         android:layout_marginBottom="98dp"
         android:layout_marginEnd="84dp"
@@ -94,8 +94,8 @@
         android:id="@+id/PatientCreateAccount2CreateAccount"
 
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="257dp"
-        android:layout_height="57dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="85dp"
         android:layout_marginStart="84dp"

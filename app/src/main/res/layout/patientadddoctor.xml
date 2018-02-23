@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="5dp">
+
+
+    <TextView
+        android:id="@+id/PatientAddDoctor"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:text="@string/PatientAddDoctor"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <AutoCompleteTextView
+        android:id="@+id/PatientAddDoctorText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="@string/PatientAddDoctorText"
+        android:inputType="textPersonName"/>
+
+    <Button
+        android:id="@+id/PatientAddDoctorBotton"
+
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/PatientAddDoctorBotton" />
+
+
+
+</LinearLayout>
