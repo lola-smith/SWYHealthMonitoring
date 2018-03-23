@@ -102,14 +102,14 @@
     <string name="DoctorHomeAccounttext">Account</string>
 
     <string name="DoctorVideoCallButton">Add Patient</string>
-    <string name="DoctorVideoCallPlainText">Enter patient user Name</string>
+    <string name="DoctorVideoCallPlainText">patient user Name</string>
     <string name="DoctorVideoCallTextName">Name</string>
     <string name="DoctorVideoCallTextVideo">Start Video Call</string>
 
     <string name="PatientVideoCallButton">Add Doctor</string>
     <string name="PatientVideoCallTextName">Name</string>
     <string name="PatientVideoCallTextVideo">Start Video Call</string>
-    <string name="PatientVideoCallPlainText">enter doctor name</string>
+    <string name="PatientVideoCallPlainText">doctor User name</string>
 
 
     <string name="PatientHospitalHospital">Hospital</string>
@@ -193,19 +193,19 @@
     <string name="PatientAddDoctorBotton">Add</string>
 
     <string name="PatientHomeTempButton">Start reading</string>
-    <string name="PatientHomeTempHistory">Seen history</string>
+    <string name="PatientHomeTempHistory">See history</string>
     <string name="PatientHomeTempSetting">Setting</string>
 
     <string name="PatientHomeHeartRateButton">Start reading</string>
-    <string name="PatientHomeHeartRateHistory">Seen history</string>
+    <string name="PatientHomeHeartRateHistory">See history</string>
     <string name="PatientHomeHeartRateSetting">Setting</string>
 
     <string name="PatientHomeSugerButton">Start reading</string>
-    <string name="PatientHomeSugerHistory">Seen history</string>
+    <string name="PatientHomeSugerHistory">See history</string>
     <string name="PatientHomeSugerSetting">Setting</string>
 
     <string name="PatientHomePressureButton">Start reading</string>
-    <string name="PatientHomePressureHistory">Seen history</string>
+    <string name="PatientHomePressureHistory">See history</string>
     <string name="PatientHomePressureSetting">Setting</string>
     <string name="TempHistoryٍReading">Reading</string>
     <string name="TempHistoryٍDate">Date</string>
@@ -279,5 +279,14 @@
 -this project is designed for remotely monitoring patients when no one with them .  If the bracelet detects life threatening vital readings, the phone synced to the bracelet will automatically alert their family.
 
 </string>
+    <string name="PatientHeart">Heart Rate</string>
+    <string name="PatientHeartReading">Reading</string>
+    <string name="PatientHeartOK">OK</string>
+    <string name="PatientTemp">Temperature</string>
+    <string name="PatientTempReading">Reading</string>
+    <string name="PatientTempOK">OK</string>
+    <string name="PatientSugerReading">Reading</string>
+    <string name="PatientSugerOK">OK</string>
+    <string name="PatientSuger">Suger</string>
 
 </resources>
