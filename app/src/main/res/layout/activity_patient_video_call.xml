@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mac.swyhealthmonitoring.PatientVideoCall">
+    tools:context="com.example.mac.swyhealthmonitoring.patient.PatientVideoCall">
 
 
     <ImageView
@@ -24,7 +24,7 @@
         app:srcCompat="@drawable/swylogo" />
 
     <Button
-        android:id="@+id/DoctorVideoCallButton"
+        android:id="@+id/PatientVideoCallButton"
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -41,23 +41,53 @@
         app:layout_constraintTop_toBottomOf="@+id/SWYImageView"
         app:layout_constraintVertical_bias="0.0" />
 
-    <AutoCompleteTextView
-        android:id="@+id/DoctorVideoCallPlainText"
-        android:layout_width="wrap_content"
+    <TextView
+        android:id="@+id/PatientVideoCallPlainText"
+        android:layout_width="151dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="260dp"
+        android:layout_marginBottom="284dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="24dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="@string/PatientVideoCallPlainText"
         android:inputType="textPersonName"
+        android:text="@string/PatientVideoCallPlainText"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.131"
+        app:layout_constraintHorizontal_bias="0.261"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DoctorVideoCallButton"
+        app:layout_constraintVertical_bias="0.611" />
+
+    <View
+        android:id="@+id/PatientHometLine1"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginBottom="328dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DoctorVideoCallButton"
         app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/PatientHometLine2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginBottom="252dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DoctorVideoCallButton"
+        app:layout_constraintVertical_bias="0.948" />
 
     <ImageButton
         android:id="@+id/PatientVideoCallIcon"
@@ -65,14 +95,14 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="100dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.387"
-        app:layout_constraintStart_toEndOf="@+id/DoctorVideoCallPlainText"
+        app:layout_constraintHorizontal_bias="0.427"
+        app:layout_constraintStart_toEndOf="@+id/PatientVideoCallPlainText"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.609"
+        app:layout_constraintVertical_bias="0.58"
         app:srcCompat="@drawable/ic_videocam_black_48px" />
 
     <View

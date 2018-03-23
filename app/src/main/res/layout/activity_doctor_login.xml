@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mac.swyhealthmonitoring.DoctorLogin">
+    tools:context="com.example.mac.swyhealthmonitoring.doctor.entry_point.DoctorLogin">
 
     <ImageView
         android:id="@+id/SWYImageView"

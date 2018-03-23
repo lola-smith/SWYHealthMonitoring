@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mac.swyhealthmonitoring.DoctorVideoCall">
+    tools:context="com.example.mac.swyhealthmonitoring.doctor.DoctorVideoCall">
 
 
     <ImageView
@@ -41,19 +41,53 @@
         app:layout_constraintTop_toBottomOf="@+id/SWYImageView"
         app:layout_constraintVertical_bias="0.0" />
 
-    <AutoCompleteTextView
+    <TextView
         android:id="@+id/DoctorVideoCallPlainText"
-        android:layout_width="wrap_content"
+        android:layout_width="151dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="244dp"
-        android:layout_marginStart="40dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="30dp"
         android:layout_marginTop="8dp"
         android:ems="10"
-        android:hint="@string/DoctorVideoCallPlainText"
         android:inputType="textPersonName"
+        android:text="@string/DoctorVideoCallPlainText"
+        android:textColor="@android:color/background_dark"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.061"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DoctorVideoCallButton" />
+        app:layout_constraintTop_toBottomOf="@+id/DoctorVideoCallButton"
+        app:layout_constraintVertical_bias="0.445" />
+
+    <View
+        android:id="@+id/PatientHometLine1"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginBottom="116dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DoctorVideoCallButton"
+        app:layout_constraintVertical_bias="0.991" />
+
+    <View
+        android:id="@+id/PatientHometLine2"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginBottom="336dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DoctorVideoCallButton"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/DoctorVideoCallIcon"
@@ -61,12 +95,12 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="280dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginStart="32dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.545"
-        app:layout_constraintStart_toEndOf="@+id/DoctorVideoCallPlainText"
+        app:layout_constraintHorizontal_bias="0.403"
+        app:layout_constraintStart_toEndOf="@+id/PatientVideoCallPlainText"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/ic_videocam_black_48px" />
@@ -75,13 +109,15 @@
         android:id="@+id/PatientHometLine"
         android:layout_width="0dp"
         android:layout_height="2dp"
-        android:layout_marginBottom="116dp"
-        android:layout_marginTop="54dp"
+        android:layout_marginBottom="260dp"
+        android:layout_marginTop="8dp"
         android:background="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintVertical_bias="0.013" />
+        app:layout_constraintTop_toBottomOf="@+id/DoctorVideoCallButton"
+        app:layout_constraintVertical_bias="0.922" />
 
     <ImageButton
         android:id="@+id/DoctorHomeHomeImage"

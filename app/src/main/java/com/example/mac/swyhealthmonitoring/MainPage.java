@@ -6,33 +6,42 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.example.mac.swyhealthmonitoring.doctor.entry_point.DoctorLogin;
+import com.example.mac.swyhealthmonitoring.doctor.info.DoctorAskQuestion;
+import com.example.mac.swyhealthmonitoring.patient.entry_point.PatientLogin;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
+
 public class MainPage extends AppCompatActivity {
 
+    @BindView(R.id.MainPatientButton)
+    Button MainPatientButton;
+
+    @BindView(R.id.MainDoctorButton)
+    Button MainDoctorButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_page);
-        final Button MainPatientButton;
-        final  Button MainDoctorButton;
+        ButterKnife.bind(this);
 
-        MainPatientButton=findViewById(R.id.MainPatientButton);
-        MainPatientButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent =new Intent(MainPage.this,PatientLogin.class);
-                startActivity(intent);
-            }
-        });
+    }
 
-        MainDoctorButton=findViewById(R.id.MainDoctorButton);
-        MainDoctorButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent =new Intent(MainPage.this,DoctorLogin.class);
-                startActivity(intent);
-            }
-        });
+    @OnClick(R.id.MainPatientButton)
+    void onClickPatientLogin(){
+        startActivity(PatientLogin.class," ");
+    }
 
+    @OnClick(R.id.MainDoctorButton)
+    void onClickDoctorLogin(){
+        startActivity(DoctorLogin.class," ");
+    }
 
+    private void startActivity(Class targetActivity,String data){
+        Intent intent =new Intent(this,targetActivity);
+        intent.putExtra("data",data);
+        startActivity(intent);
     }
 }
