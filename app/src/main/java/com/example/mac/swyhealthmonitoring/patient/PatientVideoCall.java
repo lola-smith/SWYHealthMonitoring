@@ -17,6 +17,7 @@ import com.example.mac.swyhealthmonitoring.patient.my_health.PatientMyHealth;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
 public class PatientVideoCall extends AppCompatActivity {
 
 
@@ -45,56 +46,54 @@ public class PatientVideoCall extends AppCompatActivity {
         setContentView(R.layout.activity_patient_video_call);
         ButterKnife.bind(this);
     }
+
     @OnClick(R.id.PatientHomeHome)
-    void onClickPatientHome(){
-        startActivity(PatientHome.class," ");
+    void onClickPatientHome() {
+        startActivity(PatientHome.class, " ");
     }
 
     @OnClick(R.id.PatientHomeAccount)
-    void onClickPatientAccount(){
-        startActivity(PatientAccount.class," ");
+    void onClickPatientAccount() {
+        startActivity(PatientAccount.class, " ");
     }
 
     @OnClick(R.id.PatientHomeIconLocation)
-    void onClickPatientHospitalMap(){
-        startActivity(PatientHospitalMap.class," ");
+    void onClickPatientHospitalMap() {
+        startActivity(PatientHospitalMap.class, " ");
     }
 
     @OnClick(R.id.PatientHomeHeart)
-    void onClickPatientMyHealth(){
-        startActivity(PatientMyHealth.class," ");
+    void onClickPatientMyHealth() {
+        startActivity(PatientMyHealth.class, " ");
     }
 
     @OnClick(R.id.PatientHomeFamily)
-    void onClickPatientFamily(){
-        startActivity(PatientFamily.class," ");
+    void onClickPatientFamily() {
+        startActivity(PatientFamily.class, " ");
     }
 
     @OnClick(R.id.PatientVideoCallButton)
-    void onClickPatientAddDoctor(){
+    void onClickPatientAddDoctor() {
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(PatientVideoCall.this);
-        View mView = getLayoutInflater().inflate(R.layout.patientadddoctor,null);
+        View mView = getLayoutInflater().inflate(R.layout.patientadddoctor, null);
 
-        final AutoCompleteTextView PatientAddDoctorText = (AutoCompleteTextView) mView.findViewById(R.id.PatientAddDoctorText);
-        final Button PatientAddDoctorBotton = (Button) mView.findViewById(R.id.PatientAddDoctorBotton);
+        final AutoCompleteTextView PatientAddDoctorText = mView.findViewById(R.id.PatientAddDoctorText);
+        final Button PatientAddDoctorBotton = mView.findViewById(R.id.PatientAddDoctorBotton);
 
 
-        PatientAddDoctorBotton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(PatientVideoCall.this,"Doctor has been adding",Toast.LENGTH_SHORT).show();
-            }
-        });
+        PatientAddDoctorBotton.setOnClickListener(this::onPatientDoctorClicked);
         mBuilder.setView(mView);
         AlertDialog dialog = mBuilder.create();
         dialog.show();
     }
 
+    private void onPatientDoctorClicked(View v) {
+        Toast.makeText(PatientVideoCall.this, "Doctor has been adding", Toast.LENGTH_SHORT).show();
+    }
 
-
-    private void startActivity(Class targetActivity,String data){
-        Intent intent =new Intent(this,targetActivity);
-        intent.putExtra("data",data);
+    private void startActivity(Class targetActivity, String data) {
+        Intent intent = new Intent(this, targetActivity);
+        intent.putExtra("data", data);
         startActivity(intent);
     }
 
