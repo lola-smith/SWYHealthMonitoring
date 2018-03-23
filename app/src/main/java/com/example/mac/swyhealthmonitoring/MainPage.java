@@ -27,7 +27,6 @@ public class MainPage extends AppCompatActivity {
         setContentView(R.layout.activity_main_page);
         ButterKnife.bind(this);
 
-        Bt x = Bt.getInstance();
 
     }
 
