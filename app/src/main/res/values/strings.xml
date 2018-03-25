@@ -3,7 +3,7 @@
     <string name="MainPatientButton">Patient Login</string>
     <string name="MainDoctorButton">Doctor Login</string>
 
-    <string name="PatientLoginEmail">Email</string>
+    <string name="PatientLoginUserName">User Name</string>
     <string name="PatientLoginPassword">Password</string>
     <string name="PatientLoginButtonLogin">Login</string>
     <string name="PatientLoginForgetPassword">I Forget My Password</string>
@@ -28,14 +28,18 @@
     <string name="DoctorForgetPasswordHint1">Your Password Has been Sent </string>
 
     <string name="PatientCreateAccountEmail">Email</string>
-    <string name="PatientCreateAccountName">Name</string>
+    <string name="PatientCreateAccountDate">Date</string>
     <string name="PatientCreateAccountPassword">Password</string>
     <string name="PatientCreateAccountConfirmPassword">Confirm Password</string>
-    <string name="PatientCreateAccountCreate"> Create Account</string>
+    <string name="PatientCreateAccountNext">Next</string>
     <string name="PatientCreateAccountText">Have an account already?</string>
     <string name="PatientCreateAccountLogin">Login</string>
 
-
+    <string name="PatientCreateAccount2UserName">User Name</string>
+    <string name="PatientCreateAccount2Name">Name</string>
+    <string name="PatientCreateAccount2Gender">Gender</string>
+    <string name="PatientCreateAccount2Iagree">I agree</string>
+    <string name="PatientCreateAccount2CreateAccount">Create Account</string>
 
     <string name="DoctorCreateAccountEmail">Email</string>
     <string name="DoctorCreateAccountDate">Date</string>

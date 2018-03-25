@@ -14,7 +14,6 @@ import com.example.mac.swyhealthmonitoring.patient.PatientHome;
 import com.example.mac.swyhealthmonitoring.patient.PatientHospitalMap;
 import com.example.mac.swyhealthmonitoring.patient.entry_point.PatientLogin;
 import com.example.mac.swyhealthmonitoring.patient.my_health.PatientMyHealth;
-import com.google.firebase.auth.FirebaseAuth;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -52,6 +51,7 @@ public class PatientAccount extends AppCompatActivity {
 
     @BindView(R.id.PatientAccountLogout)
     TextView PatientAccountLogout;
+
 
 
     @Override
@@ -111,9 +111,6 @@ public class PatientAccount extends AppCompatActivity {
 
     @OnClick(R.id.PatientAccountLogout)
     void onClickPatientLogin(){
-        FirebaseAuth.getInstance().signOut();
-        finish();
-
         startActivity(PatientLogin.class," ");
     }
 
