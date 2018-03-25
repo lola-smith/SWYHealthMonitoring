@@ -56,6 +56,7 @@ public class PatientCreateAccount extends AppCompatActivity {
         FBAPatientCreateAccount = FirebaseAuth.getInstance();
 
     }
+    //Register
     private void RegisterUser (){
 
         String Email = PatientCreateAccountEmail.getText().toString().trim();
