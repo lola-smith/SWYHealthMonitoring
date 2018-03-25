@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.example.mac.swyhealthmonitoring.R;
 import com.example.mac.swyhealthmonitoring.patient.PatientHome;
+import com.google.firebase.auth.FirebaseAuth;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -25,6 +26,8 @@ public class PatientLogin extends AppCompatActivity {
 
     @BindView(R.id.PatientLoginForgetPassword)
     TextView PatientLoginForgetPassword;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
