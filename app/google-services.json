@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "331785851673",
+    "firebase_url": "https://swyhealthmonitoring.firebaseio.com",
+    "project_id": "swyhealthmonitoring",
+    "storage_bucket": "swyhealthmonitoring.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:331785851673:android:fdb05c130e172c0a",
+        "android_client_info": {
+          "package_name": "com.example.mac.swyhealthmonitoring"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "331785851673-o6pega6v7fqep3p0kbpecvm5ni9ill8t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mac.swyhealthmonitoring",
+            "certificate_hash": "73bd6e0cd7a7525d49c83f25224d81408995ebab"
+          }
+        },
+        {
+          "client_id": "331785851673-vd1473ic7q1n9krvdnlhd9mofiqj9kp5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdk11CqKN6cWVFsCej3dL9iTmr1X6pxXM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "331785851673-vd1473ic7q1n9krvdnlhd9mofiqj9kp5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
