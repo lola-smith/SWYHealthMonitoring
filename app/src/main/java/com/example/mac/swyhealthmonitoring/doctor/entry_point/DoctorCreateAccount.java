@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,14 +25,24 @@ import com.google.firebase.auth.FirebaseAuthUserCollisionException;
 
 public class DoctorCreateAccount extends AppCompatActivity {
     private FirebaseAuth FBADoctorCreateAccount;
+
+    @BindView(R.id.DoctorCreateAccountCreateAccount)
+    TextView DoctorCreateAccountCreateAccount ;
+
     @BindView(R.id.DoctorCreateAccountLogin)
     TextView DoctorCreateAccountLogin ;
+
+
     @BindView(R.id.DoctorCreateAccountEmail)
-    TextView DoctorCreateAccountEmail ;
+    EditText DoctorCreateAccountEmail ;
 
 
     @BindView(R.id.DoctorCreateAccountPassword)
-    TextView DoctorCreateAccountPassword ;
+    EditText DoctorCreateAccountPassword ;
+
+    @BindView(R.id.DoctorCreateAccountConfirmPassword)
+    EditText DoctorCreateAccountConfirmPassword;
+
 
     @BindView(R.id.DoctorCreateAccountprogressBar)
     ProgressBar DoctorCreateAccountprogressBar;
@@ -45,15 +56,14 @@ public class DoctorCreateAccount extends AppCompatActivity {
 
     }
 
-    @OnClick(R.id.DoctorCreateAccountLogin)
-    void onClickDoctorLogin(){
-        startActivity(DoctorLogin.class," ");
-    }
     private void Registeruser(){
 
         String Email =DoctorCreateAccountEmail.getText().toString().trim();
 
         String password =DoctorCreateAccountPassword.getText().toString().trim();
+        String ConfirmPassword =DoctorCreateAccountConfirmPassword.getText().toString().trim();
+
+
 
         if (Email.isEmpty())
         {
@@ -72,18 +82,27 @@ public class DoctorCreateAccount extends AppCompatActivity {
 
         if (password.length()<6)
         {
-            DoctorCreateAccountEmail.setError("Minimum length of Password should be 6 ");
-            DoctorCreateAccountEmail.requestFocus();
+            DoctorCreateAccountPassword.setError("Minimum length of Password should be 6 ");
+            DoctorCreateAccountPassword.requestFocus();
             return;
 
         }
         if (password.isEmpty())
         {
-            DoctorCreateAccountEmail.setError("Password is Required");
-            DoctorCreateAccountEmail.requestFocus();
+            DoctorCreateAccountPassword.setError("Password is Required");
+            DoctorCreateAccountPassword.requestFocus();
             return;
 
         }
+
+        if (!password.equals(ConfirmPassword))
+        {
+            DoctorCreateAccountConfirmPassword.setError("ReType Password");
+            DoctorCreateAccountConfirmPassword.requestFocus();
+            return;
+
+        }
+
         DoctorCreateAccountprogressBar.setVisibility(View.VISIBLE);
 
         FBADoctorCreateAccount.createUserWithEmailAndPassword(Email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
@@ -96,6 +115,9 @@ public class DoctorCreateAccount extends AppCompatActivity {
                 if(task.isSuccessful()){
 
                     Toast.makeText(getApplicationContext(),"User Registred Successfull",Toast.LENGTH_LONG).show();
+
+                    startActivity(DoctorHome.class," ");
+
 
                 }
                 else{
@@ -114,9 +136,12 @@ public class DoctorCreateAccount extends AppCompatActivity {
     }
 
 
+    @OnClick(R.id.DoctorCreateAccountLogin)
+    void onClickDoctorLogin(){
+        startActivity(DoctorLogin.class," ");
+    }
     @OnClick(R.id.DoctorCreateAccountCreateAccount)
     void  onClickDoctorHome(){
-        startActivity(DoctorHome.class," ");
 
         Registeruser();
     }

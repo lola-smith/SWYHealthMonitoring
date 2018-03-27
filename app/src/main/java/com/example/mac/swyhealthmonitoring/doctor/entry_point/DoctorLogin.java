@@ -47,12 +47,16 @@ public class DoctorLogin extends AppCompatActivity {
 
     @BindView(R.id.DoctorLoginButtonLogin)
     Button  DoctorLoginButtonLogin;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_login);
 
         ButterKnife.bind(this);
+
+        FBADoctorLogin = FirebaseAuth.getInstance();
+
     }
     private void UserLogin(){
 
@@ -76,8 +80,8 @@ public class DoctorLogin extends AppCompatActivity {
 
         if (password.length()<6)
         {
-            DoctorLoginEmail.setError("Minimum length of Password should be 6 ");
-            DoctorLoginEmail.requestFocus();
+            DoctorLoginPassword.setError("Minimum length of Password should be 6 ");
+            DoctorLoginPassword.requestFocus();
             return;
 
         }
@@ -101,6 +105,7 @@ public class DoctorLogin extends AppCompatActivity {
                 DoctorLoginprogressBar.setVisibility(View.GONE);
                 if(task.isSuccessful()){
                     Toast.makeText(getApplicationContext(),"Login Successfull",Toast.LENGTH_LONG).show();
+                    startActivity(DoctorHome.class," ");
 
                 }
                 else{
@@ -127,7 +132,8 @@ public class DoctorLogin extends AppCompatActivity {
     }
     @OnClick(R.id.DoctorLoginButtonLogin)
     void onClickDoctorHome(){
-        startActivity(DoctorHome.class," ");
+
+        UserLogin();
     }
 
     private void startActivity(Class targetActivity,String data){
