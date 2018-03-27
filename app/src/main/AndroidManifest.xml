@@ -30,6 +30,7 @@
         <activity android:name=".doctor.entry_point.DoctorForgetPassword" />
         <activity android:name=".patient.entry_point.PatientCreateAccount" />
         <activity android:name=".doctor.entry_point.DoctorCreateAccount" />
+        <activity android:name=".doctor.entry_point.DoctorCreateAccount2" />
         <activity android:name=".patient.PatientHome" />
         <activity android:name=".patient.info.PatientAccount" />
         <activity android:name=".patient.info.PatientAccountInformation" />
