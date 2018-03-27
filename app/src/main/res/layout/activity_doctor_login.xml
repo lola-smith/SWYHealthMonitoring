@@ -22,7 +22,7 @@
         app:srcCompat="@drawable/swylogo" />
 
     <EditText
-        android:id="@+id/DoctorLoginUserName"
+        android:id="@+id/DoctorLoginEmail"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="333dp"
@@ -30,7 +30,7 @@
         android:layout_marginStart="84dp"
         android:layout_marginTop="45dp"
         android:ems="10"
-        android:hint="@string/DoctorLoginUserName"
+        android:hint="@string/DoctorLoginEmail"
         android:inputType="textPersonName"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +52,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/DoctorLoginUserName" />
+        app:layout_constraintTop_toBottomOf="@+id/DoctorLoginEmail" />
 
     <Button
         android:id="@+id/DoctorLoginButtonLogin"
@@ -136,6 +136,21 @@
         app:layout_constraintStart_toEndOf="@+id/DoctorLoginText1"
         app:layout_constraintTop_toBottomOf="@+id/DoctorLoginPassword"
         app:layout_constraintVertical_bias="0.863" />
+    <ProgressBar
+        android:id="@+id/DoctorLoginprogressBar"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 
 </android.support.constraint.ConstraintLayout>
