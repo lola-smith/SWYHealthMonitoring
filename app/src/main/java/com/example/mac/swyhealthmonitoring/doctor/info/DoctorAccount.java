@@ -10,13 +10,13 @@ import android.widget.TextView;
 import com.example.mac.swyhealthmonitoring.R;
 import com.example.mac.swyhealthmonitoring.doctor.DoctorHome;
 import com.example.mac.swyhealthmonitoring.doctor.entry_point.DoctorLogin;
-import com.google.firebase.auth.FirebaseAuth;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 public class DoctorAccount extends AppCompatActivity {
-    private FirebaseAuth FBADoctorLogout;
+
     @BindView(R.id.DoctorAccountAccountImage)
     ImageButton DoctorAccountAccountImage;
 
@@ -49,8 +49,6 @@ public class DoctorAccount extends AppCompatActivity {
     }
     @OnClick(R.id. DoctorAccountLogout)
     void onClickDoctorLogin(){
-        FBADoctorLogout.getInstance().signOut();
-        finish();
         startActivity(DoctorLogin.class," ");
     }
 

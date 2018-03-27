@@ -5,37 +5,30 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 import com.example.mac.swyhealthmonitoring.R;
+import com.example.mac.swyhealthmonitoring.doctor.DoctorHome;
 
-public class DoctorCreateAccount extends AppCompatActivity {
+public class DoctorCreateAccount2 extends AppCompatActivity {
 
-    @BindView(R.id.DoctorCreateAccountLogin)
-    TextView DoctorCreateAccountLogin ;
-
-    @BindView(R.id.DoctorCreateAccountNext)
-    Button  DoctorCreateAccountNext;
+    @BindView(R.id.DoctorCreateAccount2CreateAccount)
+    Button DoctorCreateAccount2CreateAccount ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_doctor_create_account);
+        setContentView(R.layout.activity_doctor_create_account2);
         ButterKnife.bind(this);
+
     }
 
-    @OnClick(R.id.DoctorCreateAccountLogin)
-    void onClickDoctorLogin(){
-        startActivity(DoctorLogin.class," ");
-    }
-
-
-
-    @OnClick(R.id. DoctorCreateAccountNext)
-    void  onClickDoctorCreateAccount2(){
-        startActivity(DoctorCreateAccount2.class," ");
+    @OnClick(R.id. DoctorCreateAccount2CreateAccount)
+    void  onClickDoctorHome(){
+        startActivity(DoctorHome.class," ");
     }
 
     private void startActivity(Class targetActivity,String data){
