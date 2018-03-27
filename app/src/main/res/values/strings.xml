@@ -10,7 +10,7 @@
     <string name="PatientLoginText1">Don\'t have an account?</string>
     <string name="PatientLogincreataccount">Create account</string>
 
-    <string name="DoctorLoginUserName">User Name</string>
+
     <string name="DoctorLoginPassword">Password</string>
     <string name="DoctorLoginButtonLogin">Login</string>
     <string name="DoctorLoginForgetPassword">I Forget My Password</string>
@@ -41,15 +41,10 @@
     <string name="DoctorCreateAccountDate">Date</string>
     <string name="DoctorCreateAccountPassword">Password</string>
     <string name="DoctorCreateAccountConfirmPassword">Confirm Password</string>
-    <string name="DoctorCreateAccountNext">Next</string>
+
     <string name="DoctorCreateAccountText">Have an account already?</string>
     <string name="DoctorCreateAccountLogin">Login</string>
 
-    <string name="DoctorCreateAccount2UserName">User Name</string>
-    <string name="DoctorCreateAccount2Name">Name</string>
-    <string name="DoctorCreateAccount2Gender">Gender</string>
-    <string name="DoctorCreateAccount2Iagree">I agree</string>
-    <string name="DoctorCreateAccount2CreateAccount">Create Account</string>
 
 
     <string name="PatientHomeVideoCall"><![CDATA[Start video call with your doctor now >]]></string>
@@ -284,5 +279,8 @@
     <string name="PatientSugerReading">Reading</string>
     <string name="PatientSugerOK">OK</string>
     <string name="PatientSuger">Suger</string>
+    <string name="DoctorLoginEmail">Email</string>
+    <string name="DoctorCreateAccountUName">Name</string>
+    <string name="DoctorCreateAccountCreateAccount">CreateAccount</string>
 
 </resources>
