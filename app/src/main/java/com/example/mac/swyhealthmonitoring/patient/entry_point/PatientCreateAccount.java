@@ -56,7 +56,7 @@ public class PatientCreateAccount extends AppCompatActivity {
         FBAPatientCreateAccount = FirebaseAuth.getInstance();
 
     }
-    //Register
+
     private void RegisterUser (){
 
         String Email = PatientCreateAccountEmail.getText().toString().trim();
@@ -103,29 +103,24 @@ public class PatientCreateAccount extends AppCompatActivity {
         }
         PatientCreateAccountprogressBar.setVisibility(View.VISIBLE);
 
-        FBAPatientCreateAccount.createUserWithEmailAndPassword(Email,Password).addOnCompleteListener( new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                PatientCreateAccountprogressBar.setVisibility(View.GONE);
+        Task<AuthResult> authResultTask = FBAPatientCreateAccount.createUserWithEmailAndPassword(Email, Password).addOnCompleteListener(task -> {
+            PatientCreateAccountprogressBar.setVisibility(View.GONE);
 
-                if(task.isSuccessful()){
+            if (task.isSuccessful()) {
 
-                    Toast.makeText(getApplicationContext(),"User Registred Successfull",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(), "User Registred Successfull", Toast.LENGTH_LONG).show();
 
-                    startActivity(PatientHome.class," ");
+                startActivity(PatientHome.class, " ");
 
 
-                }
-                else{
+            } else {
 
-                  if(task.getException()instanceof FirebaseAuthUserCollisionException){
-                      Toast.makeText(getApplicationContext(),"You are already registered",Toast.LENGTH_LONG).show();
-                  }
-                  else {
+                if (task.getException() instanceof FirebaseAuthUserCollisionException) {
+                    Toast.makeText(getApplicationContext(), "You are already registered", Toast.LENGTH_LONG).show();
+                } else {
 
-                      Toast.makeText(getApplicationContext(),task.getException().getMessage(),Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), task.getException().getMessage(), Toast.LENGTH_LONG).show();
 
-                  }
                 }
             }
         });
