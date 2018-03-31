@@ -50,6 +50,9 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
         }
     }
 
+
+
+
     @OnClick(R.id.PatientHomeTempButton)
     void onClickTempStartReading(){
         blutoothConnection.sendData("Hello");
@@ -88,7 +91,6 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
         intent.putExtra("data",data);
         startActivity(intent);
     }
-
     @Override
     public void onIncomingData(String message) {
         PatientHomeTempHistory.setText(message);
