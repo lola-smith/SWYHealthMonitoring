@@ -1,5 +1,6 @@
 package com.example.mac.swyhealthmonitoring.patient.my_health;
 
+import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
@@ -50,26 +51,18 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
         }
     }
 
-
-
-
     @OnClick(R.id.PatientHomeTempButton)
     void onClickTempStartReading(){
         blutoothConnection.sendData("Hello");
 
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(PatientHomeTemperature.this);
-        View mView = getLayoutInflater().inflate(R.layout.tempstartreading,null);
+        @SuppressLint("InflateParams") View mView = getLayoutInflater().inflate(R.layout.tempstartreading,null);
 
-        final TextView PatientTempReading = (TextView) mView.findViewById(R.id.PatientTempReading);
-        final Button PatientTempOK = (Button) mView.findViewById(R.id.PatientTempOK);
+        final TextView PatientTempReading =  mView.findViewById(R.id.PatientTempReading);
+        final Button PatientTempOK =  mView.findViewById(R.id.PatientTempOK);
 
 
-        PatientTempOK.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(PatientHomeTemperature.this,"Reading has been Saving",Toast.LENGTH_SHORT).show();
-            }
-        });
+        PatientTempOK.setOnClickListener(view -> Toast.makeText(PatientHomeTemperature.this,"Reading has been Saving",Toast.LENGTH_SHORT).show());
         mBuilder.setView(mView);
         AlertDialog dialog = mBuilder.create();
         dialog.show();
@@ -77,18 +70,18 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
 
     @OnClick(R.id.PatientHomeTempSetting)
     void onClickTempSetting(){
-        startActivity(TempSetting.class," ");
+        startActivity(TempSetting.class);
     }
 
     @OnClick(R.id.PatientHomeTempHistory)
     void onClickTempHistory(){
-        startActivity(TempHistory.class," ");
+        startActivity(TempHistory.class);
     }
 
 
-    private void startActivity(Class targetActivity,String data){
+    private void startActivity(Class targetActivity){
         Intent intent =new Intent(this,targetActivity);
-        intent.putExtra("data",data);
+        intent.putExtra("data", " ");
         startActivity(intent);
     }
     @Override
