@@ -11,11 +11,9 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 import java.util.UUID;
-
-/**
- * Created by sondos on 30/03/18.
- */
-
+//Iam here !
+//Connect your phone!
+//done
 public class BlutoothConnection extends AsyncTask<Void,String,Void> implements BluetoothDeviceConnection{
 
     private BluetoothSocket socket;
@@ -68,7 +66,7 @@ public class BlutoothConnection extends AsyncTask<Void,String,Void> implements B
             } catch (IOException e) {
                 e.printStackTrace();
             }
-        }else {
+        } else {
 
         }
         return false;

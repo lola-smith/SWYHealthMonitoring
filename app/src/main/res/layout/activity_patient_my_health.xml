@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".patient.my_health.PatientMyHealth">
+    tools:context="com.example.mac.swyhealthmonitoring.patient.my_health.PatientMyHealth">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="0dp"
         android:layout_height="148dp"
-        android:layout_marginBottom="420dp"
+        android:layout_marginBottom="424dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -18,7 +18,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Imageoo"
         app:layout_constraintVertical_bias="0.006"
-        app:srcCompat="@drawable/images" />
+        app:srcCompat="@drawable/images"
+        tools:ignore="UnknownIdInLayout" />
 
     <TextView
         android:id="@+id/PatientMyHealthTemperatureText"
@@ -27,17 +28,16 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="220dp"
         android:background="?attr/colorButtonNormal"
         android:text="@string/PatientMyHealthTemperatureText"
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintBottom_toTopOf="@+id/PatientMyHealthGlucoseText"
+        app:layout_constraintEnd_toStartOf="@+id/PatientMyHealthTempReadText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <TextView
         android:id="@+id/PatientMyHealthHeartRateText"
@@ -45,59 +45,58 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="?attr/colorButtonNormal"
         android:text="@string/PatientMyHealthHeartRateText"
-
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintBottom_toTopOf="@+id/PatientMyHealthPressureText"
+        app:layout_constraintEnd_toStartOf="@+id/PatientMyHealthHeartRateReadText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientMyHealthTemperatureText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.986" />
 
     <TextView
         android:id="@+id/PatientMyHealthLastReadText"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="?attr/colorButtonNormal"
         android:backgroundTint="@color/colorPrimary"
-
         android:text="@string/PatientMyHeartLastReadText"
         android:textAlignment="center"
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/PatientMyHealthTempReadText"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.97" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/PatientMyHealthGlucoseText"
         android:layout_width="135dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
+
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="?attr/colorButtonNormal"
         android:text="@string/PatientMyHealthGlucoseText"
-
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.203"
+        app:layout_constraintBottom_toTopOf="@+id/PatientMyHealthHeartRateText"
+        app:layout_constraintEnd_toStartOf="@+id/PatientMyHealthGlucoseReadText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientMyHealthPressureText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.968" />
 
     <TextView
         android:id="@+id/PatientMyHealthTempReadText"
@@ -106,15 +105,15 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="39dp"
+        android:layout_marginTop="8dp"
         android:hint="@string/PatientMyHealthTempReadText"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/PatientMyHealthGlucoseReadText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.633"
-        app:layout_constraintStart_toEndOf="@+id/PatientMyHealthTemperatureText"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.667"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.96" />
 
     <TextView
         android:id="@+id/PatientMyHealthHeartRateReadText"
@@ -123,15 +122,15 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="276dp"
         android:hint="@string/PatientMyHealthHeartRateReadText"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/PatientMyHealthPressureReadText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.628"
-        app:layout_constraintStart_toEndOf="@+id/PatientMyHealthHeartRateText"
-        app:layout_constraintTop_toBottomOf="@+id/PatientMyHealthTempReadText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.696"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
 
     <TextView
         android:id="@+id/PatientMyHealthPressureReadText"
@@ -140,15 +139,15 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="312dp"
         android:hint="@string/PatientMyHealthPressureReadText"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.555"
-        app:layout_constraintStart_toEndOf="@+id/PatientMyHealthPressureText"
-        app:layout_constraintTop_toBottomOf="@+id/PatientMyHealthHeartRateReadText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.696"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.004" />
 
     <TextView
         android:id="@+id/PatientMyHealthGlucoseReadText"
@@ -160,12 +159,12 @@
         android:layout_marginTop="8dp"
         android:hint="@string/PatientMyHealthGlucoseReadText"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/PatientMyHealthHeartRateReadText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.603"
-        app:layout_constraintStart_toEndOf="@+id/PatientMyHealthGlucoseText"
-        app:layout_constraintTop_toBottomOf="@+id/PatientMyHealthPressureReadText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="0.744"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.97" />
 
     <TextView
         android:id="@+id/PatientMyHealthPressureText"
@@ -173,35 +172,35 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
+
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:background="?attr/colorButtonNormal"
         android:text="@string/PatientMyHealthPressureText"
-
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.206"
+        app:layout_constraintBottom_toTopOf="@+id/PatientMyHealthStartReading"
+        app:layout_constraintEnd_toStartOf="@+id/PatientMyHealthPressureReadText"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientMyHealthHeartRateText"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.938" />
 
     <Button
         android:id="@+id/PatientMyHealthStartReading"
 
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="53dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/PatientMyHealthStartReading"
-        app:layout_constraintBottom_toTopOf="@+id/PatientHometLine"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.721" />
 
     <View
         android:id="@+id/PatientHometLine"
@@ -214,10 +213,11 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/Imageoo"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="UnknownIdInLayout" />
 
     <ImageButton
-        android:id="@+id/PatientHomeHome"
+        android:id="@+id/PatientMyHealthHome"
         android:layout_width="70dp"
         android:layout_height="60dp"
         android:layout_marginBottom="48dp"
@@ -230,10 +230,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.997"
-        app:srcCompat="@drawable/ic_home_black_24px" />
+        app:srcCompat="@drawable/ic_home_black_24px"
+        android:contentDescription="TODO" />
 
     <TextView
-        android:id="@+id/PatientHomeHomeIconText"
+        android:id="@+id/PatientMyHealthHomeIconText"
         android:layout_width="43dp"
         android:layout_height="22dp"
         android:layout_marginBottom="8dp"
@@ -244,11 +245,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.055"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientHomeHome"
+        app:layout_constraintTop_toBottomOf="@+id/PatientMyHealthHome"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/PatientHomeHeart"
+        android:id="@+id/PatientMyHealthHeart"
         android:layout_width="70dp"
         android:layout_height="60dp"
         android:layout_marginBottom="48dp"
@@ -256,14 +257,15 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/PatientHomeIconLocation"
-        app:layout_constraintStart_toEndOf="@+id/PatientHomeHome"
+        app:layout_constraintEnd_toStartOf="@+id/PatientMyHealthIconLocation"
+        app:layout_constraintStart_toEndOf="@+id/PatientMyHealthHome"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.997"
-        app:srcCompat="@drawable/ic_favorite_black_24px" />
+        app:srcCompat="@drawable/ic_favorite_black_24px"
+        />
 
     <TextView
-        android:id="@+id/PatientHomeHeartIconText"
+        android:id="@+id/PatientMyHealthHeartIconText"
         android:layout_width="72dp"
         android:layout_height="19dp"
         android:layout_marginBottom="8dp"
@@ -274,11 +276,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.26"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientHomeHeart"
+        app:layout_constraintTop_toBottomOf="@+id/PatientMyHealthHeart"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/PatientHomeIconLocation"
+        android:id="@+id/PatientMyHealthIconLocation"
         android:layout_width="70dp"
         android:layout_height="60dp"
         android:layout_marginBottom="48dp"
@@ -287,14 +289,15 @@
         android:layout_marginTop="8dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/PatientHomeFamily"
+        app:layout_constraintEnd_toStartOf="@+id/PatientMyHealthFamily"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_location_on_black_24px" />
+        app:srcCompat="@drawable/ic_location_on_black_24px"
+        android:contentDescription="TODO" />
 
     <TextView
-        android:id="@+id/PatientHomeIconLocationText"
+        android:id="@+id/PatientMyHealthIconLocationText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
@@ -304,11 +307,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientHomeIconLocation"
+        app:layout_constraintTop_toBottomOf="@+id/PatientMyHealthIconLocation"
         app:layout_constraintVertical_bias="0.0" />
 
     <ImageButton
-        android:id="@+id/PatientHomeFamily"
+        android:id="@+id/PatientMyHealthFamily"
         android:layout_width="70dp"
         android:layout_height="60dp"
         android:layout_marginBottom="48dp"
@@ -316,15 +319,16 @@
         android:layout_marginStart="225dp"
         android:layout_marginTop="8dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/PatientHomeAccount"
+        app:layout_constraintEnd_toStartOf="@+id/PatientMyHealthAccount"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_supervisor_account_black_24px" />
+        app:srcCompat="@drawable/ic_supervisor_account_black_24px"
+        />
 
     <ImageButton
-        android:id="@+id/PatientHomeAccount"
+        android:id="@+id/PatientMyHealthAccount"
         android:layout_width="70dp"
         android:layout_height="60dp"
         android:layout_marginBottom="48dp"
@@ -336,10 +340,11 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.997"
-        app:srcCompat="@drawable/ic_account_box_black_24px" />
+        app:srcCompat="@drawable/ic_account_box_black_24px"
+        />
 
     <TextView
-        android:id="@+id/PatientHomeIconFamilyText"
+        android:id="@+id/PatientMyHealthIconFamilyText"
         android:layout_width="48dp"
         android:layout_height="17dp"
         android:layout_marginBottom="8dp"
@@ -350,11 +355,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.725"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientHomeFamily"
+        app:layout_constraintTop_toBottomOf="@+id/PatientMyHealthFamily"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/PatientHomeAccountIconText"
+        android:id="@+id/PatientMyHealthAccountIconText"
         android:layout_width="56dp"
         android:layout_height="22dp"
         android:layout_marginBottom="8dp"
@@ -365,25 +370,24 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.958"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientHomeAccount"
+        app:layout_constraintTop_toBottomOf="@+id/PatientMyHealthAccount"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/PatientMyHealthMyHealthText"
         android:layout_width="150dp"
         android:layout_height="28dp"
-        android:layout_marginBottom="8dp"
+        android:layout_marginBottom="50dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:text="@string/PatientMyHealthMyHealthText"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintBottom_toTopOf="@+id/PatientMyHealthTemperatureText"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="0.016"
+        app:layout_constraintHorizontal_bias="0.114"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toTopOf="@+id/imageView"
-        app:layout_constraintVertical_bias="1.0" />
-
+        app:layout_constraintVertical_bias="0.852" />
 </android.support.constraint.ConstraintLayout>

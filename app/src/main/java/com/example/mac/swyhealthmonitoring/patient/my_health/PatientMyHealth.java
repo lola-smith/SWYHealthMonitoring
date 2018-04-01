@@ -17,20 +17,20 @@ import butterknife.OnClick;
 
 public class PatientMyHealth extends AppCompatActivity {
 
-    @BindView(R.id.PatientHomeHome)
-    ImageButton PatientHomeHome;
+    @BindView(R.id.PatientMyHealthHome)
+    ImageButton PatientMyHealthHome;
 
-    @BindView(R.id.PatientHomeHeart)
-    ImageButton PatientHomeHeart;
+    @BindView(R.id.PatientMyHealthHeart)
+    ImageButton PatientMyHealthHeart;
 
-    @BindView(R.id.PatientHomeAccount)
-    ImageButton PatientHomeAccount;
+    @BindView(R.id.PatientMyHealthAccount)
+    ImageButton PatientMyHealthAccount;
 
-    @BindView(R.id.PatientHomeFamily)
-    ImageButton PatientHomeFamily;
+    @BindView(R.id.PatientMyHealthFamily)
+    ImageButton PatientMyHealthFamily;
 
-    @BindView(R.id.PatientHomeIconLocation)
-    ImageButton PatientHomeIconLocation;
+    @BindView(R.id.PatientMyHealthIconLocation)
+    ImageButton PatientMyHealthIconLocation;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,29 +39,29 @@ public class PatientMyHealth extends AppCompatActivity {
 
     }
 
-    @OnClick(R.id.PatientHomeIconLocation)
+    @OnClick(R.id.PatientMyHealthIconLocation)
     void onClickPatientHospitalMap(){
         startActivity(PatientHospitalMap.class," ");
     }
 
-    @OnClick(R.id.PatientHomeFamily)
+    @OnClick(R.id.PatientMyHealthFamily)
     void onClickPatientFamily(){
         startActivity(PatientFamily.class," ");
     }
 
 
-    @OnClick(R.id.PatientHomeAccount)
+    @OnClick(R.id.PatientMyHealthAccount)
     void onClickPatientAccount(){
         startActivity(PatientAccount.class," ");
     }
 
 
-    @OnClick(R.id.PatientHomeHeart)
+    @OnClick(R.id.PatientMyHealthHeart)
     void onClickPatientMyHealth(){
         startActivity(PatientMyHealth.class," ");
     }
 
-    @OnClick(R.id.PatientHomeHome)
+    @OnClick(R.id.PatientMyHealthHome)
     void onClickPatientHome(){
         startActivity(PatientHome.class," ");
     }
@@ -74,4 +74,3 @@ public class PatientMyHealth extends AppCompatActivity {
     }
 
 }
-

@@ -1,9 +1,8 @@
 package com.example.mac.swyhealthmonitoring.patient;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
@@ -15,7 +14,6 @@ import com.example.mac.swyhealthmonitoring.patient.my_health.PatientHomePressure
 import com.example.mac.swyhealthmonitoring.patient.my_health.PatientHomeSuger;
 import com.example.mac.swyhealthmonitoring.patient.my_health.PatientHomeTemperature;
 import com.example.mac.swyhealthmonitoring.patient.my_health.PatientMyHealth;
-
 
 import butterknife.BindView;
 import butterknife.ButterKnife;

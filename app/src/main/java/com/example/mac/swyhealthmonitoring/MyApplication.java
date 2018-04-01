@@ -9,33 +9,31 @@ import com.example.mac.swyhealthmonitoring.blutooth.BlutoothConnection;
 
 import java.util.Set;
 
-/**
- * Created by sondos on 30/03/18.
- */
-
 public class MyApplication extends Application {
 
-    String DEVICE_ADDRESS = "";
-    String DEVICE_NAME="";
+  //  String DEVICE_ADDRESS = "00:21:13:00:5F:96";
+    String DEVICE_NAME="HC-05";
     BluetoothAdapter bluetoothAdapter;
     BlutoothConnection blutoothConnection;
     @Override
     public void onCreate() {
         super.onCreate();
 
+        bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
         if(!bluetoothAdapter.isEnabled()){
             bluetoothAdapter.enable();
         }
 
         Set<BluetoothDevice> devices = bluetoothAdapter.getBondedDevices();
         for (BluetoothDevice device : devices){
-//            if(device.getName().equals(DEVICE_NAME)){
-//
-//            }
-            if(device.getAddress().equals(DEVICE_ADDRESS)){
+            if(device.getName().equals(DEVICE_NAME)){
                 blutoothConnection = new BlutoothConnection(device);
                 break;
             }
+//            if(device.getAddress().equals(DEVICE_ADDRESS)){
+//                blutoothConnection = new BlutoothConnection(device);
+//                break;
+//            }
         }
     }
 
