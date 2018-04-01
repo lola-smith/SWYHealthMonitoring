@@ -267,6 +267,13 @@
     <string name="DoctorLoginEmail">Email</string>
     <string name="DoctorCreateAccountUName">Name</string>
     <string name="DoctorCreateAccountCreateAccount">CreateAccount</string>
+    <string name="PatientMyHealthHomeIconText">Home</string>
+    <string name="PatientMyHealthHeartIconText">My Health</string>
+    <string name="PatientMyHealthIconLocationText">Hospital</string>
+    <string name="PatientMyHealthIconFamilyText">Family</string>
+
+
+
 
     <string name="PatientMyHealthHeartRateText">HeartRate</string>
     <string name="PatientMyHealthPressureText">Blood Pressure</string>
@@ -279,6 +286,5 @@
     <string name="PatientMyHeartLastReadText">Last Read</string>
     <string name="PatientMyHealthTemperatureText">Temperature</string>
     <string name="PatientMyHealthStartReading">Start Reading</string>
-
 
 </resources>
