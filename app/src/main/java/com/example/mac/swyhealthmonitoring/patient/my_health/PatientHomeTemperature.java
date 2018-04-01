@@ -29,6 +29,8 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
     @BindView(R.id.PatientHomeTempSetting)
     TextView PatientHomeTempSetting;
 
+    String reading;
+
     BluetoothDeviceConnection blutoothConnection;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,15 +55,19 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
 
     @OnClick(R.id.PatientHomeTempButton)
     void onClickTempStartReading(){
-        blutoothConnection.sendData("Hello");
+        if(blutoothConnection.isConnected())
+        {  blutoothConnection.sendData("T");}
+        else
+        {
+            Toast.makeText(PatientHomeTemperature.this,"Socket is not Connected",Toast.LENGTH_SHORT).show();
+        }
 
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(PatientHomeTemperature.this);
         @SuppressLint("InflateParams") View mView = getLayoutInflater().inflate(R.layout.tempstartreading,null);
 
-        final TextView PatientTempReading =  mView.findViewById(R.id.PatientTempReading);
+       final TextView PatientTempReading =  mView.findViewById(R.id.PatientTempReading);
         final Button PatientTempOK =  mView.findViewById(R.id.PatientTempOK);
-
-
+        PatientTempReading.setText(reading);
         PatientTempOK.setOnClickListener(view -> Toast.makeText(PatientHomeTemperature.this,"Reading has been Saving",Toast.LENGTH_SHORT).show());
         mBuilder.setView(mView);
         AlertDialog dialog = mBuilder.create();
@@ -86,6 +92,7 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
     }
     @Override
     public void onIncomingData(String message) {
-        PatientHomeTempHistory.setText(message);
+       // PatientTempReading.setText(message);
+        reading=message;
     }
 }

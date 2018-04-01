@@ -36,7 +36,6 @@
     <string name="PatientCreateAccountLogin">Login</string>
 
 
-
     <string name="DoctorCreateAccountEmail">Email</string>
     <string name="DoctorCreateAccountDate">Date</string>
     <string name="DoctorCreateAccountPassword">Password</string>
@@ -44,7 +43,6 @@
 
     <string name="DoctorCreateAccountText">Have an account already?</string>
     <string name="DoctorCreateAccountLogin">Login</string>
-
 
 
     <string name="PatientHomeVideoCall"><![CDATA[Start video call with your doctor now >]]></string>
@@ -109,18 +107,6 @@
     <string name="title_activity_patient_hospital_map">Map</string>
 
 
-    <string name="PatientMyHealthHeartRateText">HeartRate</string>
-    <string name="PatientMyHealthPressureText">Blood Pressure</string>
-    <string name="PatientMyHealthGlucoseText">Glucose Level</string>
-    <string name="PatientMyHealthTempReadText"> 37 c </string>
-    <string name="PatientMyHealthHeartRateReadText"> 70 b/m</string>
-    <string name="PatientMyHealthPressureReadText">120/70</string>
-    <string name="PatientMyHealthGlucoseReadText"> 90 mg/dL </string>
-    <string name="PatientMyHealthMyHealthText">My Health</string>
-    <string name="PatientMyHeartLastReadText">Last Read</string>
-    <string name="PatientMyHealthTemperatureText">Temperature</string>
-
-
     <string name="PatientFamilyData">Date</string>
     <string name="PatientFamilyNotification">Notification</string>
     <string name="PatientFamilyRelation">Relation</string>
@@ -162,7 +148,6 @@
     <string name="DoctorSupportAskQuestion">Ask Question</string>
     <string name="DoctorSupportText">Having Trouble using SWY Health ? We\'re here to help .</string>
 
-    <string name="PatientMyHealthStartReading">Start Reading</string>
 
     <string name="PatientFamilyAddFamily1">Add Family</string>
 
@@ -282,5 +267,18 @@
     <string name="DoctorLoginEmail">Email</string>
     <string name="DoctorCreateAccountUName">Name</string>
     <string name="DoctorCreateAccountCreateAccount">CreateAccount</string>
+
+    <string name="PatientMyHealthHeartRateText">HeartRate</string>
+    <string name="PatientMyHealthPressureText">Blood Pressure</string>
+    <string name="PatientMyHealthGlucoseText">Glucose Level</string>
+    <string name="PatientMyHealthTempReadText"> 37 c </string>
+    <string name="PatientMyHealthHeartRateReadText"> 70 b/m</string>
+    <string name="PatientMyHealthPressureReadText">120/70</string>
+    <string name="PatientMyHealthGlucoseReadText"> 90 mg/dL </string>
+    <string name="PatientMyHealthMyHealthText">My Health</string>
+    <string name="PatientMyHeartLastReadText">Last Read</string>
+    <string name="PatientMyHealthTemperatureText">Temperature</string>
+    <string name="PatientMyHealthStartReading">Start Reading</string>
+
 
 </resources>

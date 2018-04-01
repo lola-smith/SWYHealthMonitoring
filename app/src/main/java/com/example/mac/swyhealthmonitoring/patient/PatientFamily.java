@@ -2,17 +2,15 @@ package com.example.mac.swyhealthmonitoring.patient;
 
 import android.app.AlertDialog;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.mac.swyhealthmonitoring.R;
-import com.example.mac.swyhealthmonitoring.patient.entry_point.PatientCreateAccount;
 import com.example.mac.swyhealthmonitoring.patient.info.PatientAccount;
 import com.example.mac.swyhealthmonitoring.patient.my_health.PatientMyHealth;
 
@@ -25,20 +23,20 @@ public class PatientFamily extends AppCompatActivity {
     @BindView(R.id.PatientFamilyAddFamily)
     Button PatientFamilyAddFamily;
 
-    @BindView(R.id.PatientHomeHome)
-    ImageButton PatientHomeHome;
+    @BindView(R.id.PatientFamilyHome)
+    ImageButton PatientFamilyHome;
 
-    @BindView(R.id.PatientHomeHeart)
-    ImageButton PatientHomeHeart;
+    @BindView(R.id.PatientFamilyHeart)
+    ImageButton PatientFamilyHeart;
 
-    @BindView(R.id.PatientHomeAccount)
-    ImageButton PatientHomeAccount;
+    @BindView(R.id.PatientFamilyAccount)
+    ImageButton PatientFamilyAccount;
 
-    @BindView(R.id.PatientHomeFamily)
-    ImageButton PatientHomeFamily;
+    @BindView(R.id.PatientFamilyFamily)
+    ImageButton PatientFamilyFamily;
 
-    @BindView(R.id.PatientHomeIconLocation)
-    ImageButton PatientHomeIconLocation;
+    @BindView(R.id.PatientFamilyIconLocation)
+    ImageButton PatientFamilyIconLocation;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -68,28 +66,28 @@ public class PatientFamily extends AppCompatActivity {
         dialog.show();
     }
 
-    @OnClick(R.id.PatientHomeFamily)
+    @OnClick(R.id.PatientFamilyFamily)
     void onClickPatientFamily(){
         startActivity(PatientFamily.class," ");
     }
 
-    @OnClick(R.id.PatientHomeIconLocation)
+    @OnClick(R.id.PatientFamilyIconLocation)
     void onClickPatientHospitalMap(){
         startActivity(PatientHospitalMap.class," ");
     }
 
-    @OnClick(R.id.PatientHomeAccount)
+    @OnClick(R.id.PatientFamilyAccount)
     void onClickPatientAccount(){
         startActivity(PatientAccount.class," ");
     }
 
 
-    @OnClick(R.id.PatientHomeHeart)
+    @OnClick(R.id.PatientFamilyHeart)
     void onClickPatientMyHealth(){
         startActivity(PatientMyHealth.class," ");
     }
 
-    @OnClick(R.id.PatientHomeHome)
+    @OnClick(R.id.PatientFamilyHome)
     void onClickPatientHome(){
         startActivity(PatientHome.class," ");
     }
