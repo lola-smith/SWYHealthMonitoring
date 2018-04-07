@@ -43,7 +43,6 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
         //do your senario again
         //it crash ag
         MyApplication app = (MyApplication)getApplication();
-        blutoothConnection = app.getBlutoothConnection();
         if(app.getBlutoothConnection() != null){
             blutoothConnection = app.getBlutoothConnection();
             blutoothConnection.addCallback("TEMP",this);
