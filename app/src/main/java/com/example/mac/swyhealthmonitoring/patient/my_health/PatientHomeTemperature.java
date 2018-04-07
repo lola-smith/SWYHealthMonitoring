@@ -102,7 +102,7 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
     }
     @Override
     public void onIncomingData(String message) {
-        PatientHomeTempHistory.setText(message);
+    //    PatientHomeTempHistory.setText(message);
         reading=message;
     }
 }
