@@ -38,13 +38,21 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
         setContentView(R.layout.activity_patient_home_temperature);
         ButterKnife.bind(this);
 
+        //Can i kill you :D
+        //we sorry
+        //do your senario again
+        //it crash ag
         MyApplication app = (MyApplication)getApplication();
+        blutoothConnection = app.getBlutoothConnection();
         if(app.getBlutoothConnection() != null){
             blutoothConnection = app.getBlutoothConnection();
             blutoothConnection.addCallback("TEMP",this);
         }
     }
 
+    //is your phone is connected?!
+    //yes
+    //Make app crash
     @Override
     protected void onDestroy() {
         super.onDestroy();
@@ -52,6 +60,9 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
             blutoothConnection.removeCallback("TEMP");
         }
     }
+    //Do our senario again
+    //ok
+    //the app did not run
 
     @OnClick(R.id.PatientHomeTempButton)
     void onClickTempStartReading(){
@@ -59,7 +70,7 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
         {  blutoothConnection.sendData("T");}
         else
         {
-            Toast.makeText(PatientHomeTemperature.this,"Socket is not Connected",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this,"Socket is not Connected",Toast.LENGTH_SHORT).show();
         }
 
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(PatientHomeTemperature.this);
@@ -92,7 +103,7 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
     }
     @Override
     public void onIncomingData(String message) {
-       // PatientTempReading.setText(message);
+        PatientHomeTempHistory.setText(message);
         reading=message;
     }
 }

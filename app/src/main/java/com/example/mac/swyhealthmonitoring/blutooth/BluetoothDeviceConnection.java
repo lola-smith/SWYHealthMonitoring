@@ -10,4 +10,5 @@ public interface BluetoothDeviceConnection{
     boolean disconnect();
     void addCallback(String key ,BluetoothCallback callback);
     void removeCallback(String key);
+
 }
