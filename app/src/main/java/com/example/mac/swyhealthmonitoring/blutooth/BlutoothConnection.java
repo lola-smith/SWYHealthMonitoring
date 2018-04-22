@@ -20,31 +20,39 @@ public class BlutoothConnection extends AsyncTask<Void,String,Void> implements B
     private BluetoothDevice device;
     private OutputStream outputStream;
     private InputStream inputStream;
-    private static final UUID MY_UUID = UUID.fromString("fa87c0d0-afac-11de-8a39-0800200c9a66");
+    private static final UUID MY_UUID = UUID.fromString("000001101-0000-1000-8000-00805f9b34fb");
 
     private Map<String,BluetoothCallback> callbackList = new HashMap<>();
 
     public BlutoothConnection(BluetoothDevice device) {
         this.device = device;
+        try {
+            socket = this.device.createRfcommSocketToServiceRecord(MY_UUID);
+            socket.connect();
+        } catch (IOException e) {
+            this.cancel(true);
+            e.printStackTrace();
+        }
+        this.execute();
+
     }
 
     @Override
     protected void onPreExecute() {
         super.onPreExecute();
-        try {
-            socket = device.createRfcommSocketToServiceRecord(MY_UUID);
-            socket.connect();
-            inputStream = socket.getInputStream();
-            outputStream = socket.getOutputStream();
-        } catch (IOException e) {
-            this.cancel(true);
-            e.printStackTrace();
-        }
+
 
     }
 
     @Override
     protected Void doInBackground(Void... device) {
+
+        try {
+            inputStream = socket.getInputStream();
+            outputStream = socket.getOutputStream();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         Scanner scanner = new Scanner(inputStream);
         while (socket.isConnected()){
             publishProgress(scanner.next());
@@ -103,6 +111,10 @@ public class BlutoothConnection extends AsyncTask<Void,String,Void> implements B
     @Override
     protected void onProgressUpdate(String... values) {
         super.onProgressUpdate(values);
+
+        for (BluetoothCallback callback : callbackList.values()) {
+            callback.onIncomingData(values[0]);
+        }
     }
 
     @Override

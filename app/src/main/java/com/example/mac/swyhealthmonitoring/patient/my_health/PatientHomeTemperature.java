@@ -3,6 +3,7 @@ package com.example.mac.swyhealthmonitoring.patient.my_health;
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -29,7 +30,12 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
     @BindView(R.id.PatientHomeTempSetting)
     TextView PatientHomeTempSetting;
 
-    String reading;
+    @BindView(R.id.PatientTempReading)
+    TextView PatientTempReading;
+
+    @BindView(R.id.PatientTempReadingState)
+    TextView PatientTempReadingState;
+
 
     BluetoothDeviceConnection blutoothConnection;
     @Override
@@ -43,7 +49,6 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
         //do your senario again
         //it crash ag
         MyApplication app = (MyApplication)getApplication();
-        blutoothConnection = app.getBlutoothConnection();
         if(app.getBlutoothConnection() != null){
             blutoothConnection = app.getBlutoothConnection();
             blutoothConnection.addCallback("TEMP",this);
@@ -73,16 +78,7 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
             Toast.makeText(this,"Socket is not Connected",Toast.LENGTH_SHORT).show();
         }
 
-        AlertDialog.Builder mBuilder = new AlertDialog.Builder(PatientHomeTemperature.this);
-        @SuppressLint("InflateParams") View mView = getLayoutInflater().inflate(R.layout.tempstartreading,null);
 
-       final TextView PatientTempReading =  mView.findViewById(R.id.PatientTempReading);
-        final Button PatientTempOK =  mView.findViewById(R.id.PatientTempOK);
-        PatientTempReading.setText(reading);
-        PatientTempOK.setOnClickListener(view -> Toast.makeText(PatientHomeTemperature.this,"Reading has been Saving",Toast.LENGTH_SHORT).show());
-        mBuilder.setView(mView);
-        AlertDialog dialog = mBuilder.create();
-        dialog.show();
     }
 
     @OnClick(R.id.PatientHomeTempSetting)
@@ -103,7 +99,10 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
     }
     @Override
     public void onIncomingData(String message) {
-        PatientHomeTempHistory.setText(message);
-        reading=message;
+        PatientTempReading.setText(message);
+
+        PatientTempReadingState.setText("normal");
+        PatientTempReadingState.setTextColor(Color.GREEN);
+
     }
 }

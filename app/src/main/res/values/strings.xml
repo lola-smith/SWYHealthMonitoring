@@ -255,15 +255,9 @@
 -this project is designed for remotely monitoring patients when no one with them .  If the bracelet detects life threatening vital readings, the phone synced to the bracelet will automatically alert their family.
 
 </string>
-    <string name="PatientHeart">Heart Rate</string>
-    <string name="PatientHeartReading">Reading</string>
-    <string name="PatientHeartOK">OK</string>
-    <string name="PatientTemp">Temperature</string>
-    <string name="PatientTempReading">Reading</string>
-    <string name="PatientTempOK">OK</string>
-    <string name="PatientSugerReading">Reading</string>
-    <string name="PatientSugerOK">OK</string>
-    <string name="PatientSuger">Suger</string>
+
+
+
     <string name="DoctorLoginEmail">Email</string>
     <string name="DoctorCreateAccountUName">Name</string>
     <string name="DoctorCreateAccountCreateAccount">CreateAccount</string>
@@ -284,7 +278,16 @@
     <string name="PatientMyHealthGlucoseReadText"> 90 mg/dL </string>
     <string name="PatientMyHealthMyHealthText">My Health</string>
     <string name="PatientMyHeartLastReadText">Last Read</string>
+
+
     <string name="PatientMyHealthTemperatureText">Temperature</string>
     <string name="PatientMyHealthStartReading">Start Reading</string>
+    <string name="PatientTempReading">Reading</string>
+    <string name="PatientTempReadingState">State</string>
+    <string name="PatientSugerReading">Reading</string>
+    <string name="PatientSugerReadingState">State</string>
+    <string name="PatientHeartReading">Reading</string>
+    <string name="PatientHeartReadingState">State</string>
+
 
 </resources>
