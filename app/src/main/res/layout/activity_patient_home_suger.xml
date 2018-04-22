@@ -31,9 +31,10 @@
         android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Imageoo"
-        app:layout_constraintVertical_bias="0.086"
+        app:layout_constraintVertical_bias="0.069"
         app:srcCompat="@drawable/glocsensor" />
 
     <Button
@@ -41,7 +42,7 @@
         style="@style/Widget.AppCompat.Button.Colored"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="208dp"
+        android:layout_marginBottom="156dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -49,8 +50,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientHomeTempImage"
-        app:layout_constraintVertical_bias="0.1" />
+        app:layout_constraintTop_toBottomOf="@+id/PatientHomeSugerImage"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ImageButton
         android:id="@+id/PatientHomeSugerHistoryIcon"
@@ -72,7 +73,7 @@
         android:id="@+id/PatientHomeSugerSettingIcon"
         android:layout_width="45dp"
         android:layout_height="45dp"
-        android:layout_marginBottom="104dp"
+        android:layout_marginBottom="84dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
@@ -87,7 +88,7 @@
         android:id="@+id/PatientHomeSugerHistory"
         android:layout_width="187dp"
         android:layout_height="41dp"
-        android:layout_marginBottom="108dp"
+        android:layout_marginBottom="88dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
@@ -96,7 +97,7 @@
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.441"
+        app:layout_constraintHorizontal_bias="0.43"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PatientHomeHeartRateSetting"
         app:layout_constraintVertical_bias="0.64" />
@@ -108,7 +109,7 @@
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="124dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="5dp"
         android:text="@string/PatientHomeSugerSetting"
         android:textColor="@android:color/background_dark"
         android:textSize="24sp"
@@ -116,13 +117,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.514"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientHomeSugerHistory" />
+        app:layout_constraintTop_toBottomOf="@+id/PatientHomeSugerHistory"
+        app:layout_constraintVertical_bias="0.227" />
 
     <View
         android:id="@+id/PatientHometLine"
         android:layout_width="0dp"
         android:layout_height="2dp"
-        android:layout_marginBottom="168dp"
+        android:layout_marginBottom="144dp"
         android:layout_marginTop="8dp"
         android:background="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -130,5 +132,40 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PatientHomeHeartReatButton" />
+
+    <TextView
+        android:id="@+id/PatientSugerReading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/PatientSugerReading"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/PatientHomeSugerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.276"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PatientHomeSugerImage"
+        app:layout_constraintVertical_bias="0.52" />
+
+    <TextView
+        android:id="@+id/PatientSugerReadingState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/PatientSugerReadingState"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/PatientHomeSugerButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.406"
+        app:layout_constraintStart_toEndOf="@+id/PatientSugerReading"
+        app:layout_constraintTop_toBottomOf="@+id/PatientHomeSugerImage"
+        app:layout_constraintVertical_bias="0.52" />
+
 
 </android.support.constraint.ConstraintLayout>
