@@ -41,6 +41,7 @@
         <activity android:name=".doctor.DoctorHome" />
         <activity android:name=".doctor.DoctorVideoCall" />
         <activity android:name=".patient.PatientVideoCall" />
+        <service android:name=".blutooth.BluetoothReadingService"/>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
