@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import com.example.mac.swyhealthmonitoring.R;
 import com.example.mac.swyhealthmonitoring.blutooth.BluetoothReadingService;
+import com.example.mac.swyhealthmonitoring.utils.ShareUtils;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -51,7 +52,7 @@ public class TempSetting extends AppCompatActivity {
                         repeateInterval = 50*24*60*60*1000;
                         break;
                 }
-
+                ShareUtils.shareToWhatsapp(TempSetting.this,"01017005710","Hello!");
                 createNotificationReminder(repeateInterval);
             }
         });

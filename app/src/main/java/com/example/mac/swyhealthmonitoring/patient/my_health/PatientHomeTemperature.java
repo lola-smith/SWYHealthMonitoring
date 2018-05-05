@@ -15,6 +15,7 @@ import com.example.mac.swyhealthmonitoring.MyApplication;
 import com.example.mac.swyhealthmonitoring.R;
 import com.example.mac.swyhealthmonitoring.blutooth.BluetoothCallback;
 import com.example.mac.swyhealthmonitoring.blutooth.BluetoothDeviceConnection;
+import com.example.mac.swyhealthmonitoring.utils.ShareUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -38,6 +39,7 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
 
 
     BluetoothDeviceConnection blutoothConnection;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,10 +50,10 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
         //we sorry
         //do your senario again
         //it crash ag
-        MyApplication app = (MyApplication)getApplication();
-        if(app.getBlutoothConnection() != null){
+        MyApplication app = (MyApplication) getApplication();
+        if (app.getBlutoothConnection() != null) {
             blutoothConnection = app.getBlutoothConnection();
-            blutoothConnection.addCallback("TEMP",this);
+            blutoothConnection.addCallback("TEMP", this);
         }
     }
 
@@ -61,7 +63,7 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        if(blutoothConnection != null){
+        if (blutoothConnection != null) {
             blutoothConnection.removeCallback("TEMP");
         }
     }
@@ -70,39 +72,53 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
     //the app did not run
 
     @OnClick(R.id.PatientHomeTempButton)
-    void onClickTempStartReading(){
-        if(blutoothConnection.isConnected())
-        {  blutoothConnection.sendData("T");}
-        else
-        {
-            Toast.makeText(this,"Socket is not Connected",Toast.LENGTH_SHORT).show();
+    void onClickTempStartReading() {
+        if (blutoothConnection.isConnected()) {
+            blutoothConnection.sendData("T");
+        } else {
+            Toast.makeText(this, "Socket is not Connected", Toast.LENGTH_SHORT).show();
         }
 
 
     }
 
     @OnClick(R.id.PatientHomeTempSetting)
-    void onClickTempSetting(){
+    void onClickTempSetting() {
         startActivity(TempSetting.class);
     }
 
     @OnClick(R.id.PatientHomeTempHistory)
-    void onClickTempHistory(){
+    void onClickTempHistory() {
         startActivity(TempHistory.class);
     }
 
 
-    private void startActivity(Class targetActivity){
-        Intent intent =new Intent(this,targetActivity);
+    private void startActivity(Class targetActivity) {
+        Intent intent = new Intent(this, targetActivity);
         intent.putExtra("data", " ");
         startActivity(intent);
     }
+
     @Override
     public void onIncomingData(String message) {
-        PatientTempReading.setText(message);
+        try {
+            float temp = Float.valueOf(message);
+            if(temp >38){
+                PatientTempReading.setText("Up Normal");
+                String person1Number = getSharedPreferences("app",MODE_PRIVATE).getString("person1","01122266168");
+                String person2Number = getSharedPreferences("app",MODE_PRIVATE).getString("person2","01122266168");
+                String person3Number = getSharedPreferences("app",MODE_PRIVATE).getString("person3","01122266168");
+                String msg = "Up Normal";
+                ShareUtils.shareToWhatsapp(this,person1Number,msg);
+                ShareUtils.shareToWhatsapp(this,person2Number,msg);
+                ShareUtils.shareToWhatsapp(this,person3Number,msg);
+            }
+            PatientTempReading.setText(message);
 
-        PatientTempReadingState.setText("normal");
-        PatientTempReadingState.setTextColor(Color.GREEN);
-
+            PatientTempReadingState.setText("normal");
+            PatientTempReadingState.setTextColor(Color.GREEN);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
     }
 }
