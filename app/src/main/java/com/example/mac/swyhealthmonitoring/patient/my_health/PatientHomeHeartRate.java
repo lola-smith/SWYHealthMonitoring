@@ -15,6 +15,7 @@ import com.example.mac.swyhealthmonitoring.R;
 import com.example.mac.swyhealthmonitoring.blutooth.BluetoothCallback;
 import com.example.mac.swyhealthmonitoring.blutooth.BluetoothDeviceConnection;
 import com.example.mac.swyhealthmonitoring.patient.info.PatientAskQuestion;
+import com.example.mac.swyhealthmonitoring.utils.ShareUtils;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -90,11 +91,40 @@ public class PatientHomeHeartRate extends AppCompatActivity implements Bluetooth
 
     @Override
     public void onIncomingData(String message) {
-        PatientHeartReading.setText(message);
+        try {
+            float heart = Float.valueOf(message);
+            if(heart >100){
+                PatientHeartReading.setText(message);
+                String person1Number = getSharedPreferences("app",MODE_PRIVATE).getString("person1","01122266168");
+                String person2Number = getSharedPreferences("app",MODE_PRIVATE).getString("person2","01122266168");
+                String person3Number = getSharedPreferences("app",MODE_PRIVATE).getString("person3","01122266168");
+                String msg = "high heart rate level";
+                ShareUtils.shareToWhatsapp(this,person1Number,msg);
+                ShareUtils.shareToWhatsapp(this,person2Number,msg);
+                ShareUtils.shareToWhatsapp(this,person3Number,msg);
+                PatientHeartReadingState.setText("UP Normal");
+                PatientHeartReadingState.setTextColor(Color.RED);
+            }
 
-        PatientHeartReadingState.setText("normal");
-        PatientHeartReadingState.setTextColor(Color.GREEN);
+            if(heart < 60){
+                PatientHeartReading.setText(message);
+                String person1Number = getSharedPreferences("app",MODE_PRIVATE).getString("person1","01122266168");
+                String person2Number = getSharedPreferences("app",MODE_PRIVATE).getString("person2","01122266168");
+                String person3Number = getSharedPreferences("app",MODE_PRIVATE).getString("person3","01122266168");
+                String msg = "low heart rate level ";
+                ShareUtils.shareToWhatsapp(this,person1Number,msg);
+                ShareUtils.shareToWhatsapp(this,person2Number,msg);
+                ShareUtils.shareToWhatsapp(this,person3Number,msg);
+                PatientHeartReadingState.setText("UP Normal");
+                PatientHeartReadingState.setTextColor(Color.RED);
+            }
+            PatientHeartReading.setText(message);
 
+            PatientHeartReadingState.setText("normal");
+            PatientHeartReadingState.setTextColor(Color.GREEN);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
     }
 
     }

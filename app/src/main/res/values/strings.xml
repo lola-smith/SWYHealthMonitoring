@@ -203,11 +203,11 @@
     <string name="TempSettingHistoryRadio1">1 Month</string>
     <string name="TempSettingHistoryRadio2">3 Month</string>
     <string name="TempSettingHistoryRadio3">6 Month</string>
-    <string name="TempSettingHistoryRadio4">1 Year</string>
-    <string name="TempSettingAutoReadingRadio1"> Day</string>
-    <string name="TempSettingAutoReadingRadio2">2 Days</string>
-    <string name="TempSettingAutoReadingRadio3"> Week</string>
-    <string name="TempSettingAutoReadingRadio4">2 Week</string>
+    <string name="TempSettingHistoryRadio4">9 Month</string>
+    <string name="TempSettingAutoReadingRadio1"> 12 hour</string>
+    <string name="TempSettingAutoReadingRadio2">Day</string>
+    <string name="TempSettingAutoReadingRadio3"> 36 hour</string>
+    <string name="TempSettingAutoReadingRadio4">2 Days</string>
 
     <string name="PressureSettingHistory">You Can See History Of</string>
     <string name="PressureSettingAutoReading">Automatic Updating Every</string>
@@ -226,22 +226,22 @@
     <string name="SugerSettingHistoryRadio1">1 Month</string>
     <string name="SugerSettingHistoryRadio2">3 Month</string>
     <string name="SugerSettingHistoryRadio3">6 Month</string>
-    <string name="SugerSettingHistoryRadio4">1 Year</string>
-    <string name="SugerSettingAutoReadingRadio1"> Day</string>
-    <string name="SugerSettingAutoReadingRadio2">2 Days</string>
-    <string name="SugerSettingAutoReadingRadio3"> Week</string>
-    <string name="SugerSettingAutoReadingRadio4">2 Week</string>
+    <string name="SugerSettingHistoryRadio4">9 Month</string>
+    <string name="SugerSettingAutoReadingRadio1"> 3 hour</string>
+    <string name="SugerSettingAutoReadingRadio2">6 hour</string>
+    <string name="SugerSettingAutoReadingRadio3"> 12 hour</string>
+    <string name="SugerSettingAutoReadingRadio4">Day</string>
 
     <string name="HeartRateSettingHistory">You Can See History Of</string>
     <string name="HeartRateSettingAutoReading">Automatic Updating Every</string>
     <string name="HeartRateSettingHistoryRadio1">1 Month</string>
     <string name="HeartRateSettingHistoryRadio2">3 Month</string>
     <string name="HeartRateSettingHistoryRadio3">6 Month</string>
-    <string name="HeartRateSettingHistoryRadio4">1 Year</string>
-    <string name="HeartRateSettingAutoReadingRadio1"> Day</string>
-    <string name="HeartRateSettingAutoReadingRadio2">2 Days</string>
-    <string name="HeartRateSettingAutoReadingRadio3"> Week</string>
-    <string name="HeartRateSettingAutoReadingRadio4">2 Week</string>
+    <string name="HeartRateSettingHistoryRadio4">9 Month</string>
+    <string name="HeartRateSettingAutoReadingRadio1">1 hour</string>
+    <string name="HeartRateSettingAutoReadingRadio2">2 hour</string>
+    <string name="HeartRateSettingAutoReadingRadio3">4 hour</string>
+    <string name="HeartRateSettingAutoReadingRadio4">6 hour</string>
     <string name="PatientAboutUsAimText">The Aim Of Our App:</string>
     <string name="PatientAboutUsContentText">SWY is an innovative solution for detecting and locating a person who\'s health in grave danger. It is also a smartphone synced mobile health monitoring bracelet capable of reading a human\'s vital signs (heart rate , body-temperature , pressure and blood suger). 
 

@@ -104,14 +104,16 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
         try {
             float temp = Float.valueOf(message);
             if(temp >38){
-                PatientTempReading.setText("Up Normal");
+                PatientTempReading.setText(message);
                 String person1Number = getSharedPreferences("app",MODE_PRIVATE).getString("person1","01122266168");
                 String person2Number = getSharedPreferences("app",MODE_PRIVATE).getString("person2","01122266168");
                 String person3Number = getSharedPreferences("app",MODE_PRIVATE).getString("person3","01122266168");
-                String msg = "Up Normal";
+                String msg = "high temptature";
                 ShareUtils.shareToWhatsapp(this,person1Number,msg);
                 ShareUtils.shareToWhatsapp(this,person2Number,msg);
                 ShareUtils.shareToWhatsapp(this,person3Number,msg);
+                PatientTempReadingState.setText("UP Normal");
+                PatientTempReadingState.setTextColor(Color.RED);
             }
             PatientTempReading.setText(message);
 

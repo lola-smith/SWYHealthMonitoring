@@ -14,6 +14,7 @@ import com.example.mac.swyhealthmonitoring.MyApplication;
 import com.example.mac.swyhealthmonitoring.R;
 import com.example.mac.swyhealthmonitoring.blutooth.BluetoothCallback;
 import com.example.mac.swyhealthmonitoring.blutooth.BluetoothDeviceConnection;
+import com.example.mac.swyhealthmonitoring.utils.ShareUtils;
 
 
 import butterknife.BindView;
@@ -91,11 +92,39 @@ public class PatientHomeSuger extends AppCompatActivity implements BluetoothCall
 
     @Override
    public void onIncomingData(String message) {
-       PatientSugerReading.setText(message);
+        try {
+            float suger = Float.valueOf(message);
+            if(suger > 3.43){
+                PatientSugerReading.setText(message);
+                String person1Number = getSharedPreferences("app",MODE_PRIVATE).getString("person1","01122266168");
+                String person2Number = getSharedPreferences("app",MODE_PRIVATE).getString("person2","01122266168");
+                String person3Number = getSharedPreferences("app",MODE_PRIVATE).getString("person3","01122266168");
+                String msg = "high suger level";
+                ShareUtils.shareToWhatsapp(this,person1Number,msg);
+                ShareUtils.shareToWhatsapp(this,person2Number,msg);
+                ShareUtils.shareToWhatsapp(this,person3Number,msg);
+                PatientSugerReadingState.setText("UP Normal");
+                PatientSugerReadingState.setTextColor(Color.RED);
+            }
+            else if(suger < 1.30){
+                PatientSugerReading.setText(message);
+                String person1Number = getSharedPreferences("app",MODE_PRIVATE).getString("person1","01122266168");
+                String person2Number = getSharedPreferences("app",MODE_PRIVATE).getString("person2","01122266168");
+                String person3Number = getSharedPreferences("app",MODE_PRIVATE).getString("person3","01122266168");
+                String msg = "low suger level";
+                ShareUtils.shareToWhatsapp(this,person1Number,msg);
+                ShareUtils.shareToWhatsapp(this,person2Number,msg);
+                ShareUtils.shareToWhatsapp(this,person3Number,msg);
+                PatientSugerReadingState.setText("UP Normal");
+                PatientSugerReadingState.setTextColor(Color.RED);
+            }
+            PatientSugerReading.setText(message);
 
-       PatientSugerReadingState.setText("normal");
-        PatientSugerReadingState.setTextColor(Color.GREEN);
-
+            PatientSugerReadingState.setText("normal");
+            PatientSugerReadingState.setTextColor(Color.GREEN);
+        }catch (Exception ex){
+            ex.printStackTrace();
+        }
     }
 
 
