@@ -1,12 +1,9 @@
 package com.example.mac.swyhealthmonitoring.patient.my_health;
 
-import android.annotation.SuppressLint;
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -103,22 +100,25 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
     public void onIncomingData(String message) {
         try {
             float temp = Float.valueOf(message);
-            if(temp >38){
+            if(temp >38 || temp <36){
                 PatientTempReading.setText(message);
-                String person1Number = getSharedPreferences("app",MODE_PRIVATE).getString("person1","01122266168");
-                String person2Number = getSharedPreferences("app",MODE_PRIVATE).getString("person2","01122266168");
-                String person3Number = getSharedPreferences("app",MODE_PRIVATE).getString("person3","01122266168");
-                String msg = "high temptature";
-                ShareUtils.shareToWhatsapp(this,person1Number,msg);
-                ShareUtils.shareToWhatsapp(this,person2Number,msg);
-                ShareUtils.shareToWhatsapp(this,person3Number,msg);
-                PatientTempReadingState.setText("UP Normal");
+
+                PatientTempReadingState.setText("Up Normal");
                 PatientTempReadingState.setTextColor(Color.RED);
+
+                String person1Number = getSharedPreferences("app",MODE_PRIVATE).getString("person1","01122266168");
+               // String person2Number = getSharedPreferences("app",MODE_PRIVATE).getString("person2","01122266168");
+              //  String person3Number = getSharedPreferences("app",MODE_PRIVATE).getString("person3","01122266168");
+                String msg = "Up Normal";
+                ShareUtils.shareToWhatsapp(this,person1Number,msg);
+              //  ShareUtils.shareToWhatsapp(this,person2Number,msg);
+                //ShareUtils.shareToWhatsapp(this,person3Number,msg);
             }
+            else{
             PatientTempReading.setText(message);
 
             PatientTempReadingState.setText("normal");
-            PatientTempReadingState.setTextColor(Color.GREEN);
+            PatientTempReadingState.setTextColor(Color.GREEN);}
         }catch (Exception ex){
             ex.printStackTrace();
         }

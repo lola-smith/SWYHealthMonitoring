@@ -194,226 +194,50 @@
         android:layout_marginBottom="281dp"
         android:layout_marginEnd="132dp"
         android:layout_marginStart="148dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="288dp"
         android:background="@color/colorAccent"
         android:text="@string/PatientFamilyAddFamily"
         android:textColor="@android:color/background_light"
         app:layout_constraintBottom_toTopOf="@+id/PatientLoginLine"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.54"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Imageoo" />
 
-
-
-    <TableRow
-        android:id="@+id/PatientFamilyTableR1"
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
+    <EditText
+        android:id="@+id/Person1Name"
+        android:layout_width="144dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="1dp"
-        android:orientation="vertical"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintEnd_toStartOf="@+id/Person1Phone"
+        app:layout_constraintHorizontal_bias="0.529"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientFamilyTable"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toBottomOf="@+id/Imageoo"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <TextView
-            android:id="@+id/PatientFamilyName1"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="20dip"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/PatientFamilyRelation1"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="20dip"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/PatientFamilyNotification1"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="20dip"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/PatientFamilyDate1"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="20dip"
-            android:textColor="#000000" />
-
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/PatientFamilyTableR2"
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
+    <EditText
+        android:id="@+id/Person1Phone"
+        android:layout_width="182dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="1dp"
+        android:layout_marginTop="80dp"
+        android:ems="10"
+        android:inputType="phone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.893"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientFamilyTableR1"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints">
-
-        <TextView
-            android:id="@+id/PatientFamilyName2"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="20dip"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/PatientFamilyRelation2"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="20dip"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/PatientFamilyNotification2"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="20dip"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/PatientFamilyDate2"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="20dip"
-            android:textColor="#000000" />
-
-    </TableRow>
-
-
-    <TableRow
-        android:id="@+id/PatientFamilyTableR3"
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientFamilyTableR2"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="MissingConstraints">
-
-        <TextView
-            android:id="@+id/PatientFamilyName3"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="20dip"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/PatientFamilyRelation3"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="20dip"
-            android:textColor="#000000" />
-
-
-        <TextView
-            android:id="@+id/PatientFamilyNotification3"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="20dip"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/PatientFamilyDate3"
-            android:layout_weight="1"
-            android:background="#dcdcdc"
-            android:gravity="center"
-            android:padding="20dip"
-            android:textColor="#000000" />
-
-    </TableRow>
-
-    <TableRow
-        android:id="@+id/PatientFamilyTable"
-        android:layout_width="match_parent"
-        android:layout_height="59dp"
-        android:layout_marginBottom="197dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="25dp"
-        app:layout_constraintBottom_toTopOf="@+id/PatientLoginLine"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientFamilyAddFamily"
-        tools:ignore="MissingConstraints">
-
-        <TextView
-            android:id="@+id/PatientFamilyName"
-            android:layout_weight="1"
-            android:background="#cac9c9"
-            android:gravity="center"
-            android:padding="20dip"
-            android:text="@string/PatientFamilyName"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/PatientFamilyRelation"
-            android:layout_weight="1"
-            android:background="#cac9c9"
-            android:gravity="center"
-            android:padding="20dip"
-            android:text="@string/PatientFamilyRelation"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/PatientFamilyNotification"
-            android:layout_weight="1"
-            android:background="#cac9c9"
-            android:gravity="center"
-            android:padding="20dip"
-            android:text="@string/PatientFamilyNotification"
-            android:textColor="#000000" />
-
-        <TextView
-            android:id="@+id/PatientFamilyDate"
-            android:layout_weight="1"
-            android:background="#cac9c9"
-            android:gravity="center"
-            android:padding="20dip"
-            android:text="@string/PatientFamilyData"
-            android:textColor="#000000" />
-
-    </TableRow>
-
-
-
-
-
-
+        app:layout_constraintTop_toBottomOf="@+id/Imageoo"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </android.support.constraint.ConstraintLayout>

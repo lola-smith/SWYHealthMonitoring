@@ -1,13 +1,11 @@
 package com.example.mac.swyhealthmonitoring.patient;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.View;
-import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
@@ -39,44 +37,37 @@ public class PatientFamily extends AppCompatActivity {
     @BindView(R.id.PatientFamilyIconLocation)
     ImageButton PatientFamilyIconLocation;
 
+    @BindView(R.id.Person1Name)
+    EditText Person1Name;
+
+    @BindView(R.id.Person1Phone)
+    EditText Person1Phone;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_family);
         ButterKnife.bind(this);
-
     }
 
-    @OnClick(R.id.PatientFamilyAddFamily)
-    void onClickPatientFamilyAddFamily(){
-        AlertDialog.Builder mBuilder = new AlertDialog.Builder(PatientFamily.this);
-        View mView = getLayoutInflater().inflate(R.layout.patientaddfamily,null);
-
-        final AutoCompleteTextView PatientFamilyAddFamilyText = (AutoCompleteTextView) mView.findViewById(R.id.PatientFamilyAddFamilyText);
-        final Button PatientFamilyAddFamilyBotton = (Button) mView.findViewById(R.id.PatientFamilyAddFamilyBotton);
-
-
-        PatientFamilyAddFamilyBotton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(PatientFamily.this,"Family has been adding",Toast.LENGTH_SHORT).show();
-            }
-        });
-        mBuilder.setView(mView);
-        AlertDialog dialog = mBuilder.create();
-        dialog.show();
-    }
 
 
     //This codes must be written at save button
     private void saveBtnClicked(){
         SharedPreferences.Editor editor = getSharedPreferences("app",MODE_PRIVATE).edit();
-//        editor.putString("person1",phoneNumber);
+
+          editor.putString("person1",Person1Phone.getText().toString());
 //        editor.putString("person2",phoneNumber);
 //        editor.putString("person3",phoneNumber);
         editor.apply();
 
         Toast.makeText(this,"Your contacts saved successfully",Toast.LENGTH_SHORT).show();
+    }
+
+
+    @OnClick(R.id.PatientFamilyAddFamily)
+    void onClickPatientFamilyAddFamily(){
+        saveBtnClicked();
     }
 
 

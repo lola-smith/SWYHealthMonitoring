@@ -4,17 +4,15 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.mac.swyhealthmonitoring.R;
 import com.example.mac.swyhealthmonitoring.blutooth.BluetoothReadingService;
-import com.example.mac.swyhealthmonitoring.utils.ShareUtils;
 
 import java.util.Calendar;
-import java.util.Date;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -24,8 +22,6 @@ public class TempSetting extends AppCompatActivity {
 
     @BindView(R.id.TempSettingAutoReadingRadio)
     RadioGroup updateReading;
-    @BindView(R.id.PressureSettingHistory)
-    RadioGroup updateHistory;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,51 +38,21 @@ public class TempSetting extends AppCompatActivity {
                 int selectedRadioBtnID = group.getCheckedRadioButtonId();
                 switch (selectedRadioBtnID) {
                     case R.id.TempSettingAutoReadingRadio1:
-                        repeateInterval = 12*60*60*1000;
+                        repeateInterval = 30*1000;
                         break;
                     case R.id.TempSettingAutoReadingRadio2:
-                        repeateInterval = 24*60*60*1000;
+                        repeateInterval = 2*24*60*60*1000;
                         break;
                     case R.id.TempSettingAutoReadingRadio3:
-                        repeateInterval = 36*60*60*1000;
+                        repeateInterval = 50*24*60*60*1000;
                         break;
                     case R.id.TempSettingAutoReadingRadio4:
-                        repeateInterval = 48*60*60*1000;
+                        repeateInterval = 50*24*60*60*1000;
                         break;
                 }
-
-               // ShareUtils.shareToWhatsapp(TempSetting.this,"01017005710","Hello!");
                 createNotificationReminder(repeateInterval);
             }
         });
-
-        updateHistory.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup group, int checkedId) {
-
-                Calendar.getInstance();
-                long repeateInterval = 1000;
-                int selectedRadioBtnID = group.getCheckedRadioButtonId();
-                switch (selectedRadioBtnID) {
-                    case R.id.TempSettingHistoryRadio1:
-                        repeateInterval = 30*24*60*60*1000;
-                        break;
-                    case R.id.TempSettingHistoryRadio2:
-                        repeateInterval = 3*30*24*60*60*1000;
-                        break;
-                    case R.id.TempSettingHistoryRadio3:
-                        repeateInterval = 6*30*24*60*60*1000;
-                        break;
-                    case R.id.TempSettingHistoryRadio4:
-                        repeateInterval = 9*30*24*60*60*1000;
-                        break;
-                }
-
-                // ShareUtils.shareToWhatsapp(TempSetting.this,"01017005710","Hello!");
-                createNotificationReminder(repeateInterval);
-            }
-        });
-
     }
 
 

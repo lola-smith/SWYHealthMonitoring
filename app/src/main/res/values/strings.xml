@@ -111,7 +111,7 @@
     <string name="PatientFamilyNotification">Notification</string>
     <string name="PatientFamilyRelation">Relation</string>
     <string name="PatientFamilyName">Name</string>
-    <string name="PatientFamilyAddFamily">Add Family</string>
+    <string name="PatientFamilyAddFamily">Save</string>
 
     <string name="PatientFamilyAddFamilyBotton">Add</string>
     <string name="PatientFamillyAddFamilyText">UserName</string>
