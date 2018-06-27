@@ -204,10 +204,10 @@
     <string name="TempSettingHistoryRadio2">3 Month</string>
     <string name="TempSettingHistoryRadio3">6 Month</string>
     <string name="TempSettingHistoryRadio4">9 Month</string>
-    <string name="TempSettingAutoReadingRadio1"> 12 hour</string>
-    <string name="TempSettingAutoReadingRadio2">Day</string>
-    <string name="TempSettingAutoReadingRadio3"> 36 hour</string>
-    <string name="TempSettingAutoReadingRadio4">2 Days</string>
+    <string name="TempSettingAutoReadingRadio1"> 6 hour</string>
+    <string name="TempSettingAutoReadingRadio2">12 hour</string>
+    <string name="TempSettingAutoReadingRadio3"> 1 Day</string>
+    <string name="TempSettingAutoReadingRadio4">2 Day</string>
 
     <string name="PressureSettingHistory">You Can See History Of</string>
     <string name="PressureSettingAutoReading">Automatic Updating Every</string>

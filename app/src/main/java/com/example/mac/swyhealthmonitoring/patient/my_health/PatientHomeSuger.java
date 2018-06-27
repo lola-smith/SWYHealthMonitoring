@@ -115,13 +115,14 @@ public class PatientHomeSuger extends AppCompatActivity implements BluetoothCall
                 ShareUtils.shareToWhatsapp(this,person1Number,msg);
                 ShareUtils.shareToWhatsapp(this,person2Number,msg);
                 ShareUtils.shareToWhatsapp(this,person3Number,msg);
-                PatientSugerReadingState.setText("UP Normal");
+                PatientSugerReadingState.setText("up normal");
                 PatientSugerReadingState.setTextColor(Color.RED);
             }
+            else {
             PatientSugerReading.setText(message);
 
             PatientSugerReadingState.setText("normal");
-            PatientSugerReadingState.setTextColor(Color.GREEN);
+            PatientSugerReadingState.setTextColor(Color.GREEN);}
         }catch (Exception ex){
             ex.printStackTrace();
         }

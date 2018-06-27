@@ -103,7 +103,7 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
             if(temp >38 || temp <36){
                 PatientTempReading.setText(message);
 
-                PatientTempReadingState.setText("Up Normal");
+                PatientTempReadingState.setText("up normal");
                 PatientTempReadingState.setTextColor(Color.RED);
 
                 String person1Number = getSharedPreferences("app",MODE_PRIVATE).getString("person1","01122266168");

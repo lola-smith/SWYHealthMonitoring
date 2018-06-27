@@ -17,8 +17,8 @@ public class BluetoothReadingService extends Service{
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
         boolean isTemp = intent.getBooleanExtra("temp",false);
-        boolean isgas = intent.getBooleanExtra("gas",false);
-        boolean isheart = intent.getBooleanExtra("heart",false);
+        boolean isX = intent.getBooleanExtra("x",false);
+        boolean isY = intent.getBooleanExtra("y",false);
         BluetoothDeviceConnection bluetoothDevice = ((MyApplication)getApplication()).getBlutoothConnection();
         if(isTemp){
             if(bluetoothDevice.isConnected()){
@@ -30,26 +30,6 @@ public class BluetoothReadingService extends Service{
             }
         }
 
-        if(isgas){
-            if(bluetoothDevice.isConnected()){
-                bluetoothDevice.sendData("G");
-                bluetoothDevice.addCallback("gas_service",(message)->{
-
-                    bluetoothDevice.removeCallback("gas_service");
-                });
-            }
-        }
-
-
-        if(isheart){
-            if(bluetoothDevice.isConnected()){
-                bluetoothDevice.sendData("H");
-                bluetoothDevice.addCallback("heart_service",(message)->{
-
-                    bluetoothDevice.removeCallback("heart_service");
-                });
-            }
-        }
         return super.onStartCommand(intent, flags, startId);
     }
 }

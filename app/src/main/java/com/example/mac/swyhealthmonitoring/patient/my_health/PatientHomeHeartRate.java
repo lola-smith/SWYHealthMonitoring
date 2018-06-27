@@ -95,7 +95,7 @@ public class PatientHomeHeartRate extends AppCompatActivity implements Bluetooth
             float heart = Float.valueOf(message);
             if(heart >100){
                 PatientHeartReading.setText(message);
-                String person1Number = getSharedPreferences("app",MODE_PRIVATE).getString("person1","01122266168");
+                String person1Number = getSharedPreferences("app",MODE_PRIVATE).getString("person1","01121590318");
                 String person2Number = getSharedPreferences("app",MODE_PRIVATE).getString("person2","01122266168");
                 String person3Number = getSharedPreferences("app",MODE_PRIVATE).getString("person3","01122266168");
                 String msg = "high heart rate level";
@@ -106,22 +106,25 @@ public class PatientHomeHeartRate extends AppCompatActivity implements Bluetooth
                 PatientHeartReadingState.setTextColor(Color.RED);
             }
 
-            if(heart < 60){
+            else if(heart < 60){
                 PatientHeartReading.setText(message);
-                String person1Number = getSharedPreferences("app",MODE_PRIVATE).getString("person1","01122266168");
-                String person2Number = getSharedPreferences("app",MODE_PRIVATE).getString("person2","01122266168");
-                String person3Number = getSharedPreferences("app",MODE_PRIVATE).getString("person3","01122266168");
+                String person1Number = getSharedPreferences("app",MODE_PRIVATE).getString("person1","01121590318");
+//                String person2Number = getSharedPreferences("app",MODE_PRIVATE).getString("person2","01122266168");
+//                String person3Number = getSharedPreferences("app",MODE_PRIVATE).getString("person3","01122266168");
                 String msg = "low heart rate level ";
                 ShareUtils.shareToWhatsapp(this,person1Number,msg);
-                ShareUtils.shareToWhatsapp(this,person2Number,msg);
-                ShareUtils.shareToWhatsapp(this,person3Number,msg);
+//                ShareUtils.shareToWhatsapp(this,person2Number,msg);
+//                ShareUtils.shareToWhatsapp(this,person3Number,msg);
                 PatientHeartReadingState.setText("UP Normal");
                 PatientHeartReadingState.setTextColor(Color.RED);
+
             }
+
+            else {
             PatientHeartReading.setText(message);
 
             PatientHeartReadingState.setText("normal");
-            PatientHeartReadingState.setTextColor(Color.GREEN);
+            PatientHeartReadingState.setTextColor(Color.GREEN);}
         }catch (Exception ex){
             ex.printStackTrace();
         }
