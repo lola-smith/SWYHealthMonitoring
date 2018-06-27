@@ -76,7 +76,7 @@ public class PatientMyHealth extends AppCompatActivity {
         if (bluetoothDevice.isConnected()) {
             bluetoothDevice.sendData("A");
             bluetoothDevice.addCallback("PatientMyHealth", message -> {
-                //x&y&z
+                //temp,heart,glucose
                 try {
                     String[] readings = message.trim().split("&");
                     tempTxt.setText(readings[0]);

@@ -3,12 +3,22 @@ package com.example.mac.swyhealthmonitoring;
 import android.app.Application;
 import android.bluetooth.BluetoothAdapter;
 import android.bluetooth.BluetoothDevice;
+import android.util.Log;
 
 import com.example.mac.swyhealthmonitoring.blutooth.BluetoothCallback;
 import com.example.mac.swyhealthmonitoring.blutooth.BluetoothDeviceConnection;
 import com.example.mac.swyhealthmonitoring.blutooth.BlutoothConnection;
+import com.example.mac.swyhealthmonitoring.database.DatabaseManager;
+import com.example.mac.swyhealthmonitoring.entities.User;
+import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
+
+import io.reactivex.Scheduler;
+import io.reactivex.schedulers.Schedulers;
 
 public class MyApplication extends Application {
 
@@ -21,15 +31,18 @@ public class MyApplication extends Application {
         super.onCreate();
 
         bluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
-        if(!bluetoothAdapter.isEnabled()){
-            bluetoothAdapter.enable();
-        }
+        Set<BluetoothDevice> devices = null;
+        if(bluetoothAdapter!=null) {
+            if (!bluetoothAdapter.isEnabled()) {
+                bluetoothAdapter.enable();
+            }
 
-        //Do you make a pair with your bt device ?
-        //yes
-        //You not make a pair with bt!
-        Set<BluetoothDevice> devices = bluetoothAdapter.getBondedDevices();
-        if(devices.size() ==0){
+            //Do you make a pair with your bt device ?
+            //yes
+            //You not make a pair with bt!
+            devices = bluetoothAdapter.getBondedDevices();
+        }
+        if(devices== null){
             blutoothConnection = new BluetoothDeviceConnection() {
                 @Override
                 public boolean isConnected() {
@@ -66,6 +79,27 @@ public class MyApplication extends Application {
 //            }
             }
         }
+
+//        User dummyUser = new User();
+//
+//        dummyUser.setEmail("test@test");
+//        dummyUser.setBirthDate("20-11");
+//        dummyUser.setGender("mail");
+//        dummyUser.setPhoneNumber("010");
+//        ArrayList<Integer> sugar = new ArrayList<>();
+//        sugar.add(1);
+//        sugar.add(2);
+//        dummyUser.setSugar(sugar);
+//
+//        Map<String,String> family = new HashMap<>();
+//        family.put("Eslam","010");
+//        family.put("Ahmad","010");
+//
+//        dummyUser.setFamilyNameAndPhoneNumbers(family);
+//        DatabaseManager.getInstance()
+//                .insertUser(dummyUser)
+//                .subscribeOn(Schedulers.io())
+//        .subscribe(()-> Log.i("Eslam...","Data inserted"));
     }
 
     public BluetoothDeviceConnection getBlutoothConnection(){

@@ -3,6 +3,7 @@ package com.example.mac.swyhealthmonitoring.patient;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 import android.widget.EditText;
@@ -10,12 +11,19 @@ import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.mac.swyhealthmonitoring.R;
+import com.example.mac.swyhealthmonitoring.database.DatabaseManager;
 import com.example.mac.swyhealthmonitoring.patient.info.PatientAccount;
 import com.example.mac.swyhealthmonitoring.patient.my_health.PatientMyHealth;
+
+import java.util.HashMap;
+import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.reactivex.Scheduler;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 
 public class PatientFamily extends AppCompatActivity {
 
@@ -51,59 +59,82 @@ public class PatientFamily extends AppCompatActivity {
     }
 
 
-
     //This codes must be written at save button
-    private void saveBtnClicked(){
-        SharedPreferences.Editor editor = getSharedPreferences("app",MODE_PRIVATE).edit();
+    private void saveBtnClicked() {
+        SharedPreferences.Editor editor = getSharedPreferences("app", MODE_PRIVATE).edit();
 
-          editor.putString("person1",Person1Phone.getText().toString());
+        editor.putString("person1", Person1Phone.getText().toString());
 //        editor.putString("person2",phoneNumber);
 //        editor.putString("person3",phoneNumber);
         editor.apply();
 
-        Toast.makeText(this,"Your contacts saved successfully",Toast.LENGTH_SHORT).show();
+
+        Map<String, String> family;
+        if (DatabaseManager.currentUser.getFamilyNameAndPhoneNumbers() == null)
+            family = new HashMap<>();
+        else
+            family = DatabaseManager.currentUser.getFamilyNameAndPhoneNumbers();
+
+        family.put(Person1Name.getText().toString(),Person1Phone.getText().toString());
+
+        DatabaseManager.currentUser.setFamilyNameAndPhoneNumbers(family);
+
+
+        DatabaseManager.getInstance().editUser(DatabaseManager.currentUser)
+        .subscribeOn(Schedulers.io())
+        .observeOn(AndroidSchedulers.mainThread())
+        .subscribe(this::onDataUpdatedInDB,this::onDatabaseError);
+    }
+
+    private void onDatabaseError(Throwable throwable) {
+        Toast.makeText(this, "Sorry Please try again later", Toast.LENGTH_SHORT).show();
+    }
+
+    private void onDataUpdatedInDB() {
+        Toast.makeText(this, "Your contacts saved successfully", Toast.LENGTH_SHORT).show();
+
     }
 
 
     @OnClick(R.id.PatientFamilyAddFamily)
-    void onClickPatientFamilyAddFamily(){
+    void onClickPatientFamilyAddFamily() {
         saveBtnClicked();
     }
 
 
     @OnClick(R.id.PatientFamilyFamily)
-    void onClickPatientFamily(){
-        startActivity(PatientFamily.class," ");
+    void onClickPatientFamily() {
+        startActivity(PatientFamily.class, " ");
     }
 
     @OnClick(R.id.PatientFamilyIconLocation)
-    void onClickPatientHospitalMap(){
-        startActivity(PatientHospitalMap.class," ");
+    void onClickPatientHospitalMap() {
+        startActivity(PatientHospitalMap.class, " ");
     }
 
     @OnClick(R.id.PatientFamilyAccount)
-    void onClickPatientAccount(){
-        startActivity(PatientAccount.class," ");
+    void onClickPatientAccount() {
+        startActivity(PatientAccount.class, " ");
     }
 
 
     @OnClick(R.id.PatientFamilyHeart)
-    void onClickPatientMyHealth(){
-        startActivity(PatientMyHealth.class," ");
+    void onClickPatientMyHealth() {
+        startActivity(PatientMyHealth.class, " ");
     }
 
     @OnClick(R.id.PatientFamilyHome)
-    void onClickPatientHome(){
-        startActivity(PatientHome.class," ");
+    void onClickPatientHome() {
+        startActivity(PatientHome.class, " ");
     }
 
 
-    private void startActivity(Class targetActivity,String data){
-        Intent intent =new Intent(this,targetActivity);
-        intent.putExtra("data",data);
+    private void startActivity(Class targetActivity, String data) {
+        Intent intent = new Intent(this, targetActivity);
+        intent.putExtra("data", data);
         startActivity(intent);
     }
 
 
-    }
+}
 
