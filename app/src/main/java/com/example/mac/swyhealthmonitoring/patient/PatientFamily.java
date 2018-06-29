@@ -14,7 +14,6 @@ import com.example.mac.swyhealthmonitoring.R;
 import com.example.mac.swyhealthmonitoring.database.DatabaseManager;
 import com.example.mac.swyhealthmonitoring.patient.info.PatientAccount;
 import com.example.mac.swyhealthmonitoring.patient.my_health.PatientMyHealth;
-
 import java.util.HashMap;
 import java.util.Map;
 

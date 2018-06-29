@@ -12,11 +12,17 @@ import com.example.mac.swyhealthmonitoring.MyApplication;
 import com.example.mac.swyhealthmonitoring.R;
 import com.example.mac.swyhealthmonitoring.blutooth.BluetoothCallback;
 import com.example.mac.swyhealthmonitoring.blutooth.BluetoothDeviceConnection;
+import com.example.mac.swyhealthmonitoring.database.DatabaseManager;
 import com.example.mac.swyhealthmonitoring.utils.ShareUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 
 public class PatientHomeTemperature extends AppCompatActivity implements BluetoothCallback {
     @BindView(R.id.PatientHomeTempButton)
@@ -100,6 +106,7 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
     public void onIncomingData(String message) {
         try {
             float temp = Float.valueOf(message);
+            DBTemp(temp);
             if(temp >38 || temp <36){
                 PatientTempReading.setText(message);
 
@@ -122,5 +129,33 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
         }catch (Exception ex){
             ex.printStackTrace();
         }
+    }
+
+    public  void DBTemp (float temp ){
+
+        List<Float> tempreading;
+        if (DatabaseManager.currentUser.getTempreture() == null)
+            tempreading =new ArrayList<>();
+        else
+            tempreading = DatabaseManager.currentUser.getTempreture();
+
+        tempreading.add(temp);
+
+        DatabaseManager.currentUser.setTempreture(tempreading);
+
+
+        DatabaseManager.getInstance().editUser(DatabaseManager.currentUser)
+                .subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(this::onDataUpdatedInDB,this::onDatabaseError);
+
+    }
+
+    private void onDatabaseError(Throwable throwable) {
+        Toast.makeText(this, "Sorry Please try again later", Toast.LENGTH_SHORT).show();
+    }
+
+    private void onDataUpdatedInDB() {
+        Toast.makeText(this, "Your contacts saved successfully", Toast.LENGTH_SHORT).show();
+
     }
 }

@@ -96,31 +96,13 @@ public class PatientHomeSuger extends AppCompatActivity implements BluetoothCall
         intent.putExtra("data", data);
         startActivity(intent);
     }
-    private void onDatabaseError(Throwable throwable) {
-        Toast.makeText(this, "Sorry Please try again later", Toast.LENGTH_SHORT).show();
-    }
-
-    private void onDataUpdatedInDB() {
-        Toast.makeText(this, "Your contacts saved successfully", Toast.LENGTH_SHORT).show();
-
-    }
+    float suger;
 
     @Override
     public void onIncomingData(String message) {
         try {
-            float suger = Float.valueOf(message);
-            List<Float> sugerreading;
-            if (DatabaseManager.currentUser.getSugar() == null)
-                sugerreading =new ArrayList<>();
-            else
-                sugerreading = DatabaseManager.currentUser.getSugar();
-
-            sugerreading.add(suger);
-
-            DatabaseManager.currentUser.setSugar(sugerreading);
-
-
-            DatabaseManager.getInstance().editUser(DatabaseManager.currentUser).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(this::onDataUpdatedInDB,this::onDatabaseError);
+             suger = Float.valueOf(message);
+             DBSuger(suger);
 
 
             if (suger > 3.43) {
@@ -154,6 +136,34 @@ public class PatientHomeSuger extends AppCompatActivity implements BluetoothCall
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+    }
+
+ public  void DBSuger (float suger ){
+
+     List<Float> sugerreading;
+     if (DatabaseManager.currentUser.getSugar() == null)
+         sugerreading =new ArrayList<>();
+     else
+         sugerreading = DatabaseManager.currentUser.getSugar();
+
+     sugerreading.add(suger);
+
+     DatabaseManager.currentUser.setSugar(sugerreading);
+
+
+     DatabaseManager.getInstance().editUser(DatabaseManager.currentUser)
+             .subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+             .subscribe(this::onDataUpdatedInDB,this::onDatabaseError);
+
+ }
+
+    private void onDatabaseError(Throwable throwable) {
+        Toast.makeText(this, "Sorry Please try again later", Toast.LENGTH_SHORT).show();
+    }
+
+    private void onDataUpdatedInDB() {
+        Toast.makeText(this, "Your contacts saved successfully", Toast.LENGTH_SHORT).show();
+
     }
 
 

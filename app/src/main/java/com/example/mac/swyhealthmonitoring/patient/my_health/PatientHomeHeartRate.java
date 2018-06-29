@@ -14,12 +14,18 @@ import com.example.mac.swyhealthmonitoring.MyApplication;
 import com.example.mac.swyhealthmonitoring.R;
 import com.example.mac.swyhealthmonitoring.blutooth.BluetoothCallback;
 import com.example.mac.swyhealthmonitoring.blutooth.BluetoothDeviceConnection;
+import com.example.mac.swyhealthmonitoring.database.DatabaseManager;
 import com.example.mac.swyhealthmonitoring.patient.info.PatientAskQuestion;
 import com.example.mac.swyhealthmonitoring.utils.ShareUtils;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 
 public class PatientHomeHeartRate extends AppCompatActivity implements BluetoothCallback {
 
@@ -93,7 +99,10 @@ public class PatientHomeHeartRate extends AppCompatActivity implements Bluetooth
     public void onIncomingData(String message) {
         try {
             float heart = Float.valueOf(message);
-            if(heart >100){
+
+           DBHeartRate (heart );
+
+                if(heart >100){
                 PatientHeartReading.setText(message);
                 String person1Number = getSharedPreferences("app",MODE_PRIVATE).getString("person1","01121590318");
                 String person2Number = getSharedPreferences("app",MODE_PRIVATE).getString("person2","01122266168");
@@ -128,6 +137,34 @@ public class PatientHomeHeartRate extends AppCompatActivity implements Bluetooth
         }catch (Exception ex){
             ex.printStackTrace();
         }
+    }
+
+    public  void DBHeartRate (float heart ){
+
+        List<Float> heartreading;
+        if (DatabaseManager.currentUser.getHeartRate() == null)
+            heartreading =new ArrayList<>();
+        else
+            heartreading = DatabaseManager.currentUser.getHeartRate();
+
+        heartreading.add(heart);
+
+        DatabaseManager.currentUser.setHeartRate(heartreading);
+
+
+        DatabaseManager.getInstance().editUser(DatabaseManager.currentUser)
+                .subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread())
+                .subscribe(this::onDataUpdatedInDB,this::onDatabaseError);
+
+    }
+
+    private void onDatabaseError(Throwable throwable) {
+        Toast.makeText(this, "Sorry Please try again later", Toast.LENGTH_SHORT).show();
+    }
+
+    private void onDataUpdatedInDB() {
+        Toast.makeText(this, "Your contacts saved successfully", Toast.LENGTH_SHORT).show();
+
     }
 
     }

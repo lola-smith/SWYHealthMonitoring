@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 
 import com.example.mac.swyhealthmonitoring.R;
+import com.example.mac.swyhealthmonitoring.database.DatabaseManager;
 import com.example.mac.swyhealthmonitoring.patient.entry_point.PatientLogin;
 
 import butterknife.BindView;
@@ -31,6 +32,9 @@ public class PatientAccountEmailAndPass extends AppCompatActivity {
     void onClickPatientAccount(){
         startActivity(PatientAccount.class," ");
     }
+
+
+
 
 
     private void startActivity(Class targetActivity,String data){

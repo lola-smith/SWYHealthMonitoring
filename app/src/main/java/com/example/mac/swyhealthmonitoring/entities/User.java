@@ -11,8 +11,8 @@ public class User {
     private String gender;
     private String birthDate;
     private String type;//doctor or patient
-    private List<Integer> tempreture;
-    private List<Integer> heartRate;
+    private List<Float> tempreture;
+    private List<Float> heartRate;
     private List<Float> sugar;
     private Map<String,String> familyNameAndPhoneNumbers;
 
@@ -72,19 +72,19 @@ public class User {
         this.type = type;
     }
 
-    public List<Integer> getTempreture() {
+    public List<Float> getTempreture() {
         return tempreture;
     }
 
-    public void setTempreture(List<Integer> tempreture) {
+    public void setTempreture(List<Float> tempreture) {
         this.tempreture = tempreture;
     }
 
-    public List<Integer> getHeartRate() {
+    public List<Float> getHeartRate() {
         return heartRate;
     }
 
-    public void setHeartRate(List<Integer> heartRate) {
+    public void setHeartRate(List<Float> heartRate) {
         this.heartRate = heartRate;
     }
 
