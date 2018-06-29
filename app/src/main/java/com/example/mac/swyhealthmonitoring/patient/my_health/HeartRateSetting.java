@@ -4,14 +4,13 @@ import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.example.mac.swyhealthmonitoring.R;
 import com.example.mac.swyhealthmonitoring.blutooth.BluetoothReadingService;
-import com.example.mac.swyhealthmonitoring.utils.ShareUtils;
 
 import java.util.Calendar;
 
@@ -19,9 +18,9 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class HeartRateSetting extends AppCompatActivity {
-    @BindView(R.id.HeartRateSettingAutoReading)
+    @BindView(R.id.HeartRateSettingAutoReadingRadio)
     RadioGroup updateReading;
-    @BindView(R.id.HeartRateSettingHistory)
+    @BindView(R.id.HeartRateSettingHistoryRadio)
     RadioGroup updateHistory;
 
     @Override
