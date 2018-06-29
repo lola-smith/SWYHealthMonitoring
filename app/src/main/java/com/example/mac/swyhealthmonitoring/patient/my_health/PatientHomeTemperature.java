@@ -107,12 +107,12 @@ public class PatientHomeTemperature extends AppCompatActivity implements Bluetoo
                 PatientTempReadingState.setTextColor(Color.RED);
 
                 String person1Number = getSharedPreferences("app",MODE_PRIVATE).getString("person1","01122266168");
-               // String person2Number = getSharedPreferences("app",MODE_PRIVATE).getString("person2","01122266168");
-              //  String person3Number = getSharedPreferences("app",MODE_PRIVATE).getString("person3","01122266168");
+                String person2Number = getSharedPreferences("app",MODE_PRIVATE).getString("person2","01122266168");
+               String person3Number = getSharedPreferences("app",MODE_PRIVATE).getString("person3","01122266168");
                 String msg = "Up Normal";
                 ShareUtils.shareToWhatsapp(this,person1Number,msg);
-              //  ShareUtils.shareToWhatsapp(this,person2Number,msg);
-                //ShareUtils.shareToWhatsapp(this,person3Number,msg);
+                ShareUtils.shareToWhatsapp(this,person2Number,msg);
+                ShareUtils.shareToWhatsapp(this,person3Number,msg);
             }
             else{
             PatientTempReading.setText(message);

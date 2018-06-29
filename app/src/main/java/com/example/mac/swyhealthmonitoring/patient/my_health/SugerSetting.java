@@ -51,7 +51,7 @@ public class SugerSetting extends AppCompatActivity {
                         repeateInterval = 24*60*60*1000;
                         break;
                 }
-              //  ShareUtils.shareToWhatsapp(SugerSetting.this,"01017005710","Hello!");
+               ShareUtils.shareToWhatsapp(SugerSetting.this,"01017005710","Hello!");
                 createNotificationReminder(repeateInterval);
             }
         });
