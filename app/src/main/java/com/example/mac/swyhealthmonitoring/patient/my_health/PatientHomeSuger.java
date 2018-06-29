@@ -14,12 +14,20 @@ import com.example.mac.swyhealthmonitoring.MyApplication;
 import com.example.mac.swyhealthmonitoring.R;
 import com.example.mac.swyhealthmonitoring.blutooth.BluetoothCallback;
 import com.example.mac.swyhealthmonitoring.blutooth.BluetoothDeviceConnection;
+import com.example.mac.swyhealthmonitoring.database.DatabaseManager;
 import com.example.mac.swyhealthmonitoring.utils.ShareUtils;
 
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import io.reactivex.Scheduler;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.schedulers.Schedulers;
 
 public class PatientHomeSuger extends AppCompatActivity implements BluetoothCallback {
 
@@ -88,11 +96,33 @@ public class PatientHomeSuger extends AppCompatActivity implements BluetoothCall
         intent.putExtra("data", data);
         startActivity(intent);
     }
+    private void onDatabaseError(Throwable throwable) {
+        Toast.makeText(this, "Sorry Please try again later", Toast.LENGTH_SHORT).show();
+    }
+
+    private void onDataUpdatedInDB() {
+        Toast.makeText(this, "Your contacts saved successfully", Toast.LENGTH_SHORT).show();
+
+    }
 
     @Override
     public void onIncomingData(String message) {
         try {
             float suger = Float.valueOf(message);
+            List<Float> sugerreading;
+            if (DatabaseManager.currentUser.getSugar() == null)
+                sugerreading =new ArrayList<>();
+            else
+                sugerreading = DatabaseManager.currentUser.getSugar();
+
+            sugerreading.add(suger);
+
+            DatabaseManager.currentUser.setSugar(sugerreading);
+
+
+            DatabaseManager.getInstance().editUser(DatabaseManager.currentUser).subscribeOn(Schedulers.io()).observeOn(AndroidSchedulers.mainThread()).subscribe(this::onDataUpdatedInDB,this::onDatabaseError);
+
+
             if (suger > 3.43) {
                 PatientSugerReading.setText(message);
                 String person1Number = getSharedPreferences("app", MODE_PRIVATE).getString("person1", "01122266168");

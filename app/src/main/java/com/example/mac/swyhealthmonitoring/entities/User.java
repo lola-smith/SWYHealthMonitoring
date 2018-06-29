@@ -13,7 +13,7 @@ public class User {
     private String type;//doctor or patient
     private List<Integer> tempreture;
     private List<Integer> heartRate;
-    private List<Integer> sugar;
+    private List<Float> sugar;
     private Map<String,String> familyNameAndPhoneNumbers;
 
     public String getUserName() {
@@ -88,11 +88,11 @@ public class User {
         this.heartRate = heartRate;
     }
 
-    public List<Integer> getSugar() {
+    public List<Float> getSugar() {
         return sugar;
     }
 
-    public void setSugar(List<Integer> sugar) {
+    public void setSugar(List<Float> sugar) {
         this.sugar = sugar;
     }
 
