@@ -7,6 +7,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.example.mac.swyhealthmonitoring.R;
+import com.example.mac.swyhealthmonitoring.database.DatabaseManager;
 import com.example.mac.swyhealthmonitoring.patient.PatientFamily;
 import com.example.mac.swyhealthmonitoring.patient.PatientHome;
 import com.example.mac.swyhealthmonitoring.patient.PatientHospitalMap;
@@ -51,12 +52,16 @@ public class PatientAccount extends AppCompatActivity {
     @BindView(R.id.PatientAccountLogout)
     TextView PatientAccountLogout;
 
+    @BindView(R.id.PatientAccountUserName)
+    TextView PatientAccountUserName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_patient_account);
         ButterKnife.bind(this);
+
+        PatientAccountUserName.setText( DatabaseManager.currentUser.getUserName());
     }
 
     @OnClick(R.id.PatientAccountHome)
@@ -121,5 +126,6 @@ public class PatientAccount extends AppCompatActivity {
         intent.putExtra("data",data);
         startActivity(intent);
     }
+
 
 }
